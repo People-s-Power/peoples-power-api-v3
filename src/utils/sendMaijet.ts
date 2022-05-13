@@ -44,7 +44,7 @@ export const endorsedCampMail = async (title, endorsementsCount, email, name) =>
       "Messages":[
         {
           "From": {
-            "Email": "kingifean@out.com",
+            "Email": "kingifean@gmail.com",
             "Name": "Endorsements"
           },
           "To": [
@@ -76,7 +76,7 @@ export const viewCampMail = async (title, userName, email, name) => {
       "Messages":[
         {
           "From": {
-            "Email": "kingifean@out.com",
+            "Email": "kingifean@gmail.com",
             "Name": "View"
           },
           "To": [
@@ -108,7 +108,7 @@ export const updateCampMail = async (title, email, name) => {
       "Messages":[
         {
           "From": {
-            "Email": "kingifean@out.com",
+            "Email": "kingifean@gmail.com",
             "Name": "Campiange Edit"
           },
           "To": [
