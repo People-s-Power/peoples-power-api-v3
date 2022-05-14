@@ -57,7 +57,7 @@ export class AuthService {
     try {
       // await sendMail(payload.email, 'Verify your email', html);
       user = await this.userModel.create(payload);
-      const token = this.jwtService.sign(user._id);
+      const token = this.jwtService.sign(user.id);
 
       return {
         user: {
@@ -79,15 +79,9 @@ export class AuthService {
       .select('-password');
     if (user) {
       try {
-        const userObj = {
-          ...data,
-          country: session.location.country_name,
-          city: session.location.city,
-        }
-        
         await this.userModel.findByIdAndUpdate(
           user.id,
-          { ...userObj, image: user.image ? user.image : data.image },
+          { ...data, image: user.image ? user.image : data.image },
           { new: true },
         );
         const token = this.jwtService.sign(user.id);
@@ -97,7 +91,12 @@ export class AuthService {
       }
     }
     try {
-      user = await this.userModel.create({ ...data, isActive: true });
+      user = await this.userModel.create({ 
+        ...data,
+        country: session.location.country_name,
+        city: session.location.city,
+        isActive: true
+      });
       const token = this.jwtService.sign(user.id);
       return { user, token };
     } catch (error) {

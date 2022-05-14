@@ -40,7 +40,7 @@ let AuthService = class AuthService {
         const payload = Object.assign(Object.assign({}, data), { password: bcrypt.hashSync(password, 10), emailToken: (Math.floor(Math.random() * 90000) + 10000).toString(), firstName: (_b = (_a = data === null || data === void 0 ? void 0 : data.name) === null || _a === void 0 ? void 0 : _a.split(' ')) === null || _b === void 0 ? void 0 : _b[0], lastName: (_d = (_c = data === null || data === void 0 ? void 0 : data.name) === null || _c === void 0 ? void 0 : _c.split(' ')) === null || _d === void 0 ? void 0 : _d[1], country: session.location.country_name, city: session.location.city });
         try {
             user = await this.userModel.create(payload);
-            const token = this.jwtService.sign(user._id);
+            const token = this.jwtService.sign(user.id);
             return {
                 user: {
                     id: user._id,
@@ -60,8 +60,7 @@ let AuthService = class AuthService {
             .select('-password');
         if (user) {
             try {
-                const userObj = Object.assign(Object.assign({}, data), { country: session.location.country_name, city: session.location.city });
-                await this.userModel.findByIdAndUpdate(user.id, Object.assign(Object.assign({}, userObj), { image: user.image ? user.image : data.image }), { new: true });
+                await this.userModel.findByIdAndUpdate(user.id, Object.assign(Object.assign({}, data), { image: user.image ? user.image : data.image }), { new: true });
                 const token = this.jwtService.sign(user.id);
                 return { user, token };
             }
@@ -70,7 +69,7 @@ let AuthService = class AuthService {
             }
         }
         try {
-            user = await this.userModel.create(Object.assign(Object.assign({}, data), { isActive: true }));
+            user = await this.userModel.create(Object.assign(Object.assign({}, data), { country: session.location.country_name, city: session.location.city, isActive: true }));
             const token = this.jwtService.sign(user.id);
             return { user, token };
         }
