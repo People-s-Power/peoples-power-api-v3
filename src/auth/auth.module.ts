@@ -45,7 +45,7 @@ import { JwtStrategy, SessionSerializer } from './strategies/jwt.strategy';
   exports: [JwtStrategy, PassportModule, AuthService],
 })
 export class AuthModule {
-  // configure(consumer: MiddlewareConsumer) {
-  //   consumer.apply(LocationMiddleware).forRoutes(AuthController);
-  // }
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(LocationMiddleware).forRoutes(AuthController);
+  }
 }

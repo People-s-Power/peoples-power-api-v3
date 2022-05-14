@@ -39,8 +39,12 @@ let AuthController = class AuthController {
     }
     async register(data, session) {
         const location = session.location;
-        const user = await this.authService.registerWithEmail(Object.assign(Object.assign({}, data), { location }));
-        return user.id;
+        const result = await this.authService.registerWithEmail(Object.assign(Object.assign({}, data), { location }));
+        return {
+            id: result.user.id,
+            token: result.token,
+            isActive: result.user.isActive,
+        };
     }
     async registerWithGoogleAndFacebook(data) {
         const result = await this.authService.registerWithGoogleAndFacebook(data);

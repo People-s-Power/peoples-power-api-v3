@@ -115,6 +115,10 @@ __decorate([
     }),
     __metadata("design:type", Array)
 ], Campaign.prototype, "views", void 0);
+__decorate([
+    mongoose_1.Prop({ required: true }),
+    __metadata("design:type", String)
+], Campaign.prototype, "region", void 0);
 Campaign = __decorate([
     graphql_1.ObjectType(),
     mongoose_1.Schema({

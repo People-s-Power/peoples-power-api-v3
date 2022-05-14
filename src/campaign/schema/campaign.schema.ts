@@ -79,6 +79,8 @@ export class Campaign {
     type: [{ type: Types.ObjectId, ref: 'View', autopopulate: true }],
   })
   views: any[];
+  @Prop({ required: true })
+  region: string;
 }
 
 @Schema()

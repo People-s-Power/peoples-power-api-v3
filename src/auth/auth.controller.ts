@@ -59,12 +59,16 @@ export class AuthController {
     @Session() session: ISession,
   ) {
     const location = session.location;
-    const user = await this.authService.registerWithEmail({
+    const result = await this.authService.registerWithEmail({
       ...data,
       location,
     });
 
-    return user.id;
+    return {
+      id: result.user.id,
+      token: result.token,
+      isActive: result.user.isActive,
+    };
   }
   @Post('register-google')
   async registerWithGoogleAndFacebook(@Body() data: any) {

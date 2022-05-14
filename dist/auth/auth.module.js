@@ -21,6 +21,9 @@ const auth_resolver_1 = require("./auth.resolver");
 const auth_service_1 = require("./auth.service");
 const jwt_strategy_1 = require("./strategies/jwt.strategy");
 let AuthModule = class AuthModule {
+    configure(consumer) {
+        consumer.apply(location_middleware_1.LocationMiddleware).forRoutes(auth_controller_1.AuthController);
+    }
 };
 AuthModule = __decorate([
     common_1.Module({

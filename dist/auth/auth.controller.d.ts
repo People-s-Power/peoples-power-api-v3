@@ -16,7 +16,11 @@ export declare class AuthController {
         token: string;
         isActive: boolean;
     }>;
-    register(data: RegisterWithEmailDTO, session: ISession): Promise<any>;
+    register(data: RegisterWithEmailDTO, session: ISession): Promise<{
+        id: any;
+        token: string;
+        isActive: boolean;
+    }>;
     registerWithGoogleAndFacebook(data: any): Promise<{
         id: any;
         token: string;

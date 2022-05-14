@@ -4,7 +4,10 @@ import { AuthService } from './auth.service';
 export declare class AuthResolver {
     private readonly authService;
     constructor(authService: AuthService);
-    registerWithEmail(input: User): Promise<Partial<import("src/user/entity/user.schema").UserDocument>>;
+    registerWithEmail(input: User): Promise<{
+        user: Partial<import("src/user/entity/user.schema").UserDocument>;
+        token: string;
+    }>;
     loginWithEmail(email: string, password: string, phone: string, req: ReqWithUser): Promise<{
         user: Partial<import("src/user/entity/user.schema").UserDocument>;
         token: string;

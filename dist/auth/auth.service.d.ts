@@ -8,7 +8,10 @@ export declare class AuthService {
     private readonly req;
     private jwtService;
     constructor(userModel: Model<UserDocument>, req: ReqWithUser, jwtService: JwtService);
-    registerWithEmail(data: Partial<RegisterWithEmailDTO>): Promise<Partial<UserDocument>>;
+    registerWithEmail(data: Partial<RegisterWithEmailDTO>): Promise<{
+        user: Partial<UserDocument>;
+        token: string;
+    }>;
     registerWithGoogleAndFacebook(data: UserDocument): Promise<{
         user: Partial<UserDocument>;
         token: string;

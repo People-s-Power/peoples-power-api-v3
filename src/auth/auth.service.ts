@@ -30,12 +30,12 @@ export class AuthService {
   ) {}
   async registerWithEmail(
     data: Partial<RegisterWithEmailDTO>,
-  ): Promise<Partial<UserDocument>> {
+  ): Promise<{ user: Partial<UserDocument>; token: string }> {
     const { password, email } = data;
     let user = await this.userModel.findOne({ email });
     const session: ISession = this.req.session;
 
-    console.log(session.location);
+    // console.log(session.location);
     if (user)
       throw new BadRequestException('Email already exist, signin instead');
     const payload: Partial<User> = {
@@ -45,6 +45,8 @@ export class AuthService {
       // name: `${data?.firstName} ${data?.lastName}`,
       firstName: data?.name?.split(' ')?.[0],
       lastName: data?.name?.split(' ')?.[1],
+      country: session.location.country_name,
+      city: session.location.city,
     };
     // const html = `
     //   <h3>Thank you for registering with EDFHR</h3>
@@ -55,8 +57,15 @@ export class AuthService {
     try {
       // await sendMail(payload.email, 'Verify your email', html);
       user = await this.userModel.create(payload);
+      const token = this.jwtService.sign(user._id);
 
-      return user;
+      return {
+        user: {
+          id: user._id,
+          isActive: user.isActive,
+        },
+        token,
+      };
     } catch (error) {
       throw error;
     }
@@ -64,14 +73,21 @@ export class AuthService {
   async registerWithGoogleAndFacebook(
     data: UserDocument,
   ): Promise<{ user: Partial<UserDocument>; token: string }> {
+    const session: ISession = this.req.session;
     let user = await this.userModel
       .findOne({ email: data.email })
       .select('-password');
     if (user) {
       try {
+        const userObj = {
+          ...data,
+          country: session.location.country_name,
+          city: session.location.city,
+        }
+        
         await this.userModel.findByIdAndUpdate(
           user.id,
-          { ...data, image: user.image ? user.image : data.image },
+          { ...userObj, image: user.image ? user.image : data.image },
           { new: true },
         );
         const token = this.jwtService.sign(user.id);

@@ -28,6 +28,7 @@ export declare class Campaign {
     likeCount: number;
     promoted: boolean;
     views: any[];
+    region: string;
 }
 export declare class View {
     user: UserDocument;
