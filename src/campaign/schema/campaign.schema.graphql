@@ -19,6 +19,7 @@ type Campaign {
   promoted: Boolean
   views: [String]
   category: String
+  region: String
 }
 
 type View {

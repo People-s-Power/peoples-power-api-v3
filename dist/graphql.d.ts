@@ -325,6 +325,7 @@ export interface Campaign {
     promoted?: Nullable<boolean>;
     views?: Nullable<Nullable<string>[]>;
     category?: Nullable<string>;
+    region?: Nullable<string>;
 }
 export interface View {
     user?: Nullable<string>;

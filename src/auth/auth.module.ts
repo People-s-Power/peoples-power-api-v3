@@ -18,7 +18,7 @@ import config from 'src/utils/config';
 import { AuthController } from './auth.controller';
 import { AuthResolver } from './auth.resolver';
 import { AuthService } from './auth.service';
-import { JwtStrategy, SessionSerializer } from './strategies/jwt.strategy';
+import { JwtStrategy, SessionSerializer } from './strategies/jwt.strategy'; 
 
 @Module({
   providers: [

@@ -53,7 +53,7 @@ let CampaignService = class CampaignService {
         try {
             const campaign = await this.campaignModel.create(Object.assign(Object.assign({}, data), { author,
                 excerpt,
-                image, numberOfPaidEndorsementCount: 0, numberOfPaidViewsCount: 0 }));
+                image, numberOfPaidEndorsementCount: 0, numberOfPaidViewsCount: 0, region: user.country }));
             this.campaignGateway.createdCampaign({
                 campaignTitle: campaign.title,
                 user,
@@ -84,7 +84,6 @@ let CampaignService = class CampaignService {
             const campaigns = await this.campaignModel
                 .find({ status: campaign_interface_1.CampaignStatusEnum.Active })
                 .sort({ createdAt: -1 })
-                .limit(limit)
                 .populate('author', 'id firstName lastName')
                 .populate('endorsements', 'id');
             return campaigns;

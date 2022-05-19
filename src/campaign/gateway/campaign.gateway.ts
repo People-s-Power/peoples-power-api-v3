@@ -83,6 +83,7 @@ export class CampaignGateway implements OnGatewayConnection, OnGatewayInit {
   async getCampaignNotice() {
     const campaigns = await this.noticeModel
       .find({ db_model: 'campaign' })
+      .sort({ createdAt: -1 })
       .populate('user', 'image, id, firstName, lastName');
     return this.server.emit(CampaignSocketEnum.Get, campaigns);
   }
@@ -91,11 +92,13 @@ export class CampaignGateway implements OnGatewayConnection, OnGatewayInit {
     if (!model) {
       const notices = await this.noticeModel
         .find()
+        .sort({ createdAt: -1 })
         .populate('user', 'image, id, firstName, lastName');
       return this.server.emit('all', notices);
     } else {
       const notices = await this.noticeModel
         .find({ db_model: model })
+        .sort({ createdAt: -1 })
         .populate('user', 'image, id, firstName, lastName');
       return this.server.emit('all', notices);
     }

@@ -58,6 +58,8 @@ export class CampaignService {
         image,
         numberOfPaidEndorsementCount: 0,
         numberOfPaidViewsCount: 0,
+        region: user.country,
+
       });
       this.campaignGateway.createdCampaign({
         campaignTitle: campaign.title,
@@ -89,7 +91,6 @@ export class CampaignService {
       const campaigns = await this.campaignModel
         .find({ status: CampaignStatusEnum.Active })
         .sort({ createdAt: -1 })
-        .limit(limit)
         .populate('author', 'id firstName lastName')
         .populate('endorsements', 'id');
 
