@@ -32,6 +32,7 @@ let GQLGuard = class GQLGuard {
     async canActivate(context) {
         const ctx = graphql_1.GqlExecutionContext.create(context);
         const request = ctx.getContext().req;
+        console.log(request.session);
         return await request.user;
     }
 };

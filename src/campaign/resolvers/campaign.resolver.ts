@@ -4,6 +4,9 @@ import { CurrentUser, GQLGuard } from 'src/auth/guards/graphql.guard';
 import { UserDocument } from 'src/user/entity/user.schema';
 import { CampaignService } from '../services/campaign.service';
 import { EndorsementService } from '../services/endorsement.service';
+// import { RealIP } from 'nestjs-real-ip';
+import { Req } from '@nestjs/common'
+import { Request } from 'express'
 
 @Resolver('Campaign')
 export class CampaignResolver {
@@ -14,7 +17,7 @@ export class CampaignResolver {
   @UseGuards(GQLGuard)
   @Query()
   async myCampaign(@CurrentUser() user: UserDocument) {
-    console.log(user)
+    // console.log(user)
     return await this.campaignService.myCampaigns(user?.id);
   }
   @Query()
@@ -26,8 +29,7 @@ export class CampaignResolver {
     return await this.campaignService.findOne(slug);
   }
   @Query()
-  async getActiveCampaigns(@CurrentUser() user: UserDocument) {
-    // console.log(user)
+  async getActiveCampaigns() {
     return await this.campaignService.findAllActive();
   }
   @Mutation()

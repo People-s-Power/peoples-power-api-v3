@@ -27,7 +27,7 @@ export class GQLGuard implements CanActivate {
   async canActivate(context: ExecutionContext) {
     const ctx = GqlExecutionContext.create(context);
     const request = ctx.getContext().req;
-    // console.log(request.user);
+    console.log(request.session);
     return await request.user;
   }
 }

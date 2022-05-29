@@ -8,6 +8,6 @@ export declare class CampaignResolver {
     myCampaign(user: UserDocument): Promise<import("../schema/campaign.schema").Campaign[]>;
     getCampaigns(limit: number): Promise<import("../schema/campaign.schema").Campaign[]>;
     getCampaign(slug: string): Promise<import("../schema/campaign.schema").CampaignDocument>;
-    getActiveCampaigns(user: UserDocument): Promise<import("../schema/campaign.schema").Campaign[]>;
+    getActiveCampaigns(): Promise<import("../schema/campaign.schema").Campaign[]>;
     deleteCampaign(id: string): Promise<import("../schema/campaign.schema").CampaignDocument>;
 }

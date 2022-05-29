@@ -25,7 +25,6 @@ let CampaignResolver = class CampaignResolver {
         this.endorsementService = endorsementService;
     }
     async myCampaign(user) {
-        console.log(user);
         return await this.campaignService.myCampaigns(user === null || user === void 0 ? void 0 : user.id);
     }
     async getCampaigns(limit) {
@@ -34,7 +33,7 @@ let CampaignResolver = class CampaignResolver {
     async getCampaign(slug) {
         return await this.campaignService.findOne(slug);
     }
-    async getActiveCampaigns(user) {
+    async getActiveCampaigns() {
         return await this.campaignService.findAllActive();
     }
     async deleteCampaign(id) {
@@ -65,9 +64,8 @@ __decorate([
 ], CampaignResolver.prototype, "getCampaign", null);
 __decorate([
     graphql_1.Query(),
-    __param(0, graphql_guard_1.CurrentUser()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object]),
+    __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], CampaignResolver.prototype, "getActiveCampaigns", null);
 __decorate([
