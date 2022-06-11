@@ -18,7 +18,7 @@ import { Endorsement } from '../schema/endorsement.schema';
 import { viewCampMail, updateCampMail } from  '../../utils/sendMaijet'
 
 export class ISessionResponseData {
-  id: string;
+  id: any;
   user: string;
   location: IGeo;
 }

@@ -5,10 +5,7 @@ const mongoose_1 = require("mongoose");
 const config_1 = require("./config");
 const connectOldDB = async (collectionName) => {
     try {
-        const { connection } = await mongoose_1.connect(config_1.default.V2_MONGO_URI, {
-            useUnifiedTopology: true,
-            useNewUrlParser: true,
-        });
+        const { connection } = await mongoose_1.connect(config_1.default.V2_MONGO_URI);
         let data = await connection.db.collection(collectionName);
         data = await data.find().toArray();
         return data;

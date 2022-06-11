@@ -53,4 +53,4 @@ export declare class Applicant {
     rep: Record<string, User>;
     lawyer: Record<string, User>;
 }
-export declare const ApplicantSchema: import("mongoose").Schema<Document<Applicant, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
+export declare const ApplicantSchema: import("mongoose").Schema<Document<Applicant, any, any>, import("mongoose").Model<Document<Applicant, any, any>, any, any>, undefined, {}>;

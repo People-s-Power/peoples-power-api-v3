@@ -11,4 +11,4 @@ export declare class Endorsement {
     updatedAt: Date;
     likeCount: number;
 }
-export declare const EndorsementSchema: import("mongoose").Schema<Document<Endorsement, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
+export declare const EndorsementSchema: import("mongoose").Schema<Document<Endorsement, any, any>, import("mongoose").Model<Document<Endorsement, any, any>, any, any>, undefined, {}>;

@@ -16,4 +16,4 @@ export declare class Affidavit {
     applicant: Applicant;
     applicant_id: Applicant;
 }
-export declare const AffidavitSchema: Mongoose.Schema<Mongoose.Document<Affidavit, any, any>, Mongoose.Model<any, any, any>, undefined, any>;
+export declare const AffidavitSchema: Mongoose.Schema<Mongoose.Document<Affidavit, any, any>, Mongoose.Model<Mongoose.Document<Affidavit, any, any>, any, any>, undefined, {}>;

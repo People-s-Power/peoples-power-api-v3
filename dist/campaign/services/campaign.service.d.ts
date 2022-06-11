@@ -7,7 +7,7 @@ import { CampaignGateway } from '../gateway/campaign.gateway';
 import { Campaign, CampaignDocument, ViewDocument } from '../schema/campaign.schema';
 import { Endorsement } from '../schema/endorsement.schema';
 export declare class ISessionResponseData {
-    id: string;
+    id: any;
     user: string;
     location: IGeo;
 }

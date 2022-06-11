@@ -33,5 +33,5 @@ export declare class Campaign {
 export declare class View {
     user: UserDocument;
 }
-export declare const ViewSchema: import("mongoose").Schema<Document<View, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
-export declare const CampaignSchema: import("mongoose").Schema<Document<Campaign, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
+export declare const ViewSchema: import("mongoose").Schema<Document<View, any, any>, import("mongoose").Model<Document<View, any, any>, any, any>, undefined, {}>;
+export declare const CampaignSchema: import("mongoose").Schema<Document<Campaign, any, any>, import("mongoose").Model<Document<Campaign, any, any>, any, any>, undefined, {}>;

@@ -9,4 +9,4 @@ export declare class Notice {
     db_model: string;
     user: User;
 }
-export declare const NoticeSchema: import("mongoose").Schema<Document<Notice, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
+export declare const NoticeSchema: import("mongoose").Schema<Document<Notice, any, any>, import("mongoose").Model<Document<Notice, any, any>, any, any>, undefined, {}>;

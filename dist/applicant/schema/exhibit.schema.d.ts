@@ -7,4 +7,4 @@ export declare class Exhibit {
     image: string;
     applicant_id: ObjectId;
 }
-export declare const ExhibitSchema: import("mongoose").Schema<Document<Exhibit, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
+export declare const ExhibitSchema: import("mongoose").Schema<Document<Exhibit, any, any>, import("mongoose").Model<Document<Exhibit, any, any>, any, any>, undefined, {}>;

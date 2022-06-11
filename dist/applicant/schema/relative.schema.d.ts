@@ -8,4 +8,4 @@ export declare class Relative {
     email: string;
     applicant_id: ObjectId;
 }
-export declare const RelativeSchema: import("mongoose").Schema<Document<Relative, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
+export declare const RelativeSchema: import("mongoose").Schema<Document<Relative, any, any>, import("mongoose").Model<Document<Relative, any, any>, any, any>, undefined, {}>;

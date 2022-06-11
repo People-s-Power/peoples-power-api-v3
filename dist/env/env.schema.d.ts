@@ -8,4 +8,4 @@ export declare class Env {
     value: string;
     isPrivate: boolean;
 }
-export declare const EnvSchema: import("mongoose").Schema<Document<Env, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
+export declare const EnvSchema: import("mongoose").Schema<Document<Env, any, any>, import("mongoose").Model<Document<Env, any, any>, any, any>, undefined, {}>;

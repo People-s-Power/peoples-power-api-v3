@@ -18,4 +18,4 @@ export declare class Transaction {
     purpose: PaymentPurposeEnum;
     key: string;
 }
-export declare const TransactionSchema: import("mongoose").Schema<Document<Transaction, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
+export declare const TransactionSchema: import("mongoose").Schema<Document<Transaction, any, any>, import("mongoose").Model<Document<Transaction, any, any>, any, any>, undefined, {}>;

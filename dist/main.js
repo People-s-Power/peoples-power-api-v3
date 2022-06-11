@@ -7,7 +7,6 @@ const swagger_1 = require("@nestjs/swagger");
 const cookieSession = require("express-session");
 const passport = require("passport");
 const express = require("express");
-const path_1 = require("path");
 const app_module_1 = require("./app.module");
 const config_1 = require("./utils/config");
 const MongoStore = require("connect-mongo");
@@ -29,10 +28,7 @@ const prodOrigins = [
 ];
 exports.origin = process.env.NODE_ENV === 'production' ? prodOrigins : devOrigins;
 async function bootstrap() {
-    const app = await core_1.NestFactory.create(app_module_1.AppModule, {
-        bodyParser: true,
-        logger: true,
-    });
+    const app = await core_1.NestFactory.create(app_module_1.AppModule);
     const swaqqgerConfig = new swagger_1.DocumentBuilder()
         .setTitle('Edfhr Api')
         .setDescription('The EDFHR API description')
@@ -65,9 +61,6 @@ async function bootstrap() {
     app.use(passport.initialize());
     app.use(passport.session());
     app.useGlobalPipes(new common_1.ValidationPipe());
-    app.useStaticAssets(path_1.join(__dirname, '..', 'public'));
-    app.setBaseViewsDir(path_1.join(__dirname, '..', 'public/views'));
-    app.setViewEngine('hbs');
     await app.listen(PORT, () => {
         var _a, _b;
         console.log(`process.env.DOCKER: ${(_b = (_a = process.env) === null || _a === void 0 ? void 0 : _a.DOCKER) === null || _b === void 0 ? void 0 : _b.toString()}`);

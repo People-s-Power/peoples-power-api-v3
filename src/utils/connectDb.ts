@@ -29,10 +29,7 @@ import config from './config';
 
 export const connectOldDB = async (collectionName: string): Promise<any[]> => {
   try {
-    const { connection } = await connect(config.V2_MONGO_URI, {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-    });
+    const { connection } = await connect(config.V2_MONGO_URI);
 
     let data: any = await connection.db.collection(collectionName);
     data = await data.find().toArray();

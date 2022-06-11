@@ -17,5 +17,5 @@ export declare class RepComment {
     status: boolean;
     content: string;
 }
-export declare const ReportSchema: import("mongoose").Schema<Document<Report, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
-export declare const RepCommentSchema: import("mongoose").Schema<Document<RepComment, any, any>, import("mongoose").Model<any, any, any>, undefined, any>;
+export declare const ReportSchema: import("mongoose").Schema<Document<Report, any, any>, import("mongoose").Model<Document<Report, any, any>, any, any>, undefined, {}>;
+export declare const RepCommentSchema: import("mongoose").Schema<Document<RepComment, any, any>, import("mongoose").Model<Document<RepComment, any, any>, any, any>, undefined, {}>;

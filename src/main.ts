@@ -1,11 +1,11 @@
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { NestExpressApplication } from '@nestjs/platform-express';
+// import { NestExpressApplication } from '@nestjs/platform-express';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as cookieSession from 'express-session';
 import * as passport from 'passport';
 import * as express from 'express';
-import { join } from 'path';
+// import { join } from 'path';
 import { AppModule } from './app.module';
 import config from './utils/config';
 import MongoStore = require('connect-mongo');
@@ -32,10 +32,7 @@ const prodOrigins = [
 export const origin =
   process.env.NODE_ENV === 'production' ? prodOrigins : devOrigins;
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
-    bodyParser: true,
-    logger: true,
-  });
+  const app = await NestFactory.create(AppModule);
   const swaqqgerConfig = new DocumentBuilder()
     .setTitle('Edfhr Api')
     .setDescription('The EDFHR API description')
@@ -78,9 +75,6 @@ async function bootstrap() {
   app.use(passport.session());
   app.useGlobalPipes(new ValidationPipe());
 
-  app.useStaticAssets(join(__dirname, '..', 'public'));
-  app.setBaseViewsDir(join(__dirname, '..', 'public/views'));
-  app.setViewEngine('hbs');
   // app.setGlobalPrefix('api/v3');
   await app.listen(PORT, () => {
     console.log(`process.env.DOCKER: ${process.env?.DOCKER?.toString()}`);
