@@ -43,54 +43,54 @@ let RelativeController = class RelativeController {
     }
 };
 __decorate([
-    common_1.Post(),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [relative_dto_1.CreateRelativeDTO]),
     __metadata("design:returntype", void 0)
 ], RelativeController.prototype, "create", null);
 __decorate([
-    common_1.Put(),
-    __param(0, common_1.Body()),
+    (0, common_1.Put)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [relative_dto_1.UpdateRelativeDTO]),
     __metadata("design:returntype", void 0)
 ], RelativeController.prototype, "update", null);
 __decorate([
-    common_1.Delete('/single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Delete)('/single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], RelativeController.prototype, "delete", null);
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], RelativeController.prototype, "findAll", null);
 __decorate([
-    common_1.Get('/single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('/single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], RelativeController.prototype, "findOne", null);
 __decorate([
-    common_1.Get('/applicant/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('/applicant/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], RelativeController.prototype, "findByApplicant", null);
 __decorate([
-    common_1.Post('seed'),
+    (0, common_1.Post)('seed'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], RelativeController.prototype, "seedRelatives", null);
 RelativeController = __decorate([
-    common_1.Controller('api/v3/relative'),
+    (0, common_1.Controller)('api/v3/relative'),
     __metadata("design:paramtypes", [relative_service_1.RelativeService])
 ], RelativeController);
 exports.RelativeController = RelativeController;

@@ -20,7 +20,7 @@ const jsonwebtoken_1 = require("jsonwebtoken");
 const mongoose_2 = require("mongoose");
 const user_schema_1 = require("../../user/entity/user.schema");
 const config_1 = require("../../utils/config");
-let LoginGuard = class LoginGuard extends passport_1.AuthGuard('local') {
+let LoginGuard = class LoginGuard extends (0, passport_1.AuthGuard)('local') {
     async canActivate(context) {
         await super.canActivate(context);
         const request = context.switchToHttp().getRequest();
@@ -29,10 +29,10 @@ let LoginGuard = class LoginGuard extends passport_1.AuthGuard('local') {
     }
 };
 LoginGuard = __decorate([
-    common_1.Injectable()
+    (0, common_1.Injectable)()
 ], LoginGuard);
 exports.LoginGuard = LoginGuard;
-let CustomLoginGuard = class CustomLoginGuard extends passport_1.AuthGuard('custom') {
+let CustomLoginGuard = class CustomLoginGuard extends (0, passport_1.AuthGuard)('custom') {
     async canActivate(context) {
         await super.canActivate(context);
         const request = context.switchToHttp().getRequest();
@@ -41,7 +41,7 @@ let CustomLoginGuard = class CustomLoginGuard extends passport_1.AuthGuard('cust
     }
 };
 CustomLoginGuard = __decorate([
-    common_1.Injectable()
+    (0, common_1.Injectable)()
 ], CustomLoginGuard);
 exports.CustomLoginGuard = CustomLoginGuard;
 let RestAuthGuard = class RestAuthGuard {
@@ -51,7 +51,7 @@ let RestAuthGuard = class RestAuthGuard {
     }
 };
 RestAuthGuard = __decorate([
-    common_1.Injectable()
+    (0, common_1.Injectable)()
 ], RestAuthGuard);
 exports.RestAuthGuard = RestAuthGuard;
 let WsGuard = class WsGuard {
@@ -62,7 +62,7 @@ let WsGuard = class WsGuard {
         var _a, _b;
         const client = context.switchToWs().getClient();
         const token = (_b = (_a = client.handshake) === null || _a === void 0 ? void 0 : _a.headers) === null || _b === void 0 ? void 0 : _b.authorization;
-        const validToken = jsonwebtoken_1.verify(token, config_1.default.SECRET);
+        const validToken = (0, jsonwebtoken_1.verify)(token, config_1.default.SECRET);
         if (validToken) {
             const user = await this.userModel
                 .findById(validToken)
@@ -76,8 +76,8 @@ let WsGuard = class WsGuard {
     }
 };
 WsGuard = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(user_schema_1.User.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(user_schema_1.User.name)),
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], WsGuard);
 exports.WsGuard = WsGuard;

@@ -44,56 +44,56 @@ let ReportController = class ReportController {
     }
 };
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], ReportController.prototype, "findAll", null);
 __decorate([
-    common_1.Get('/single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('/single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ReportController.prototype, "findOne", null);
 __decorate([
-    common_1.Get('/applicant/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('/applicant/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ReportController.prototype, "findByApplicant", null);
 __decorate([
-    common_1.Delete('/single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Delete)('/single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ReportController.prototype, "delete", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Post(),
-    __param(0, common_1.Body()),
-    __param(1, common_1.Req()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [report_dto_1.CreateReportDTO, Object]),
     __metadata("design:returntype", void 0)
 ], ReportController.prototype, "create", null);
 __decorate([
-    common_1.Put(),
-    __param(0, common_1.Body()),
+    (0, common_1.Put)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [report_dto_1.UpdateReportDTO]),
     __metadata("design:returntype", void 0)
 ], ReportController.prototype, "update", null);
 __decorate([
-    common_1.Post('seed'),
+    (0, common_1.Post)('seed'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], ReportController.prototype, "seed", null);
 ReportController = __decorate([
-    common_1.Controller('api/v3/report'),
+    (0, common_1.Controller)('api/v3/report'),
     __metadata("design:paramtypes", [report_service_1.ReportService])
 ], ReportController);
 exports.ReportController = ReportController;

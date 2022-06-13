@@ -16,43 +16,43 @@ const applicant_shema_1 = require("./applicant.shema");
 let Affidavit = class Affidavit {
 };
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Affidavit.prototype, "name", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Affidavit.prototype, "address", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Affidavit.prototype, "title", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Affidavit.prototype, "religion", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Affidavit.prototype, "occupation", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Affidavit.prototype, "rel", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Affidavit.prototype, "gender", void 0);
 __decorate([
-    mongoose_1.Prop({ type: Mongoose.Types.ObjectId, ref: 'Applicant' }),
+    (0, mongoose_1.Prop)({ type: Mongoose.Types.ObjectId, ref: 'Applicant' }),
     __metadata("design:type", applicant_shema_1.Applicant)
 ], Affidavit.prototype, "applicant", void 0);
 __decorate([
-    mongoose_1.Prop({ type: Mongoose.Types.ObjectId, ref: 'Applicant' }),
+    (0, mongoose_1.Prop)({ type: Mongoose.Types.ObjectId, ref: 'Applicant' }),
     __metadata("design:type", applicant_shema_1.Applicant)
 ], Affidavit.prototype, "applicant_id", void 0);
 Affidavit = __decorate([
-    mongoose_1.Schema({
+    (0, mongoose_1.Schema)({
         timestamps: true,
         toJSON: {
             transform: (doc, ret) => {

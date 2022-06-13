@@ -29,24 +29,24 @@ let AuthResolver = class AuthResolver {
     }
 };
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('input')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('input')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_schema_1.User]),
     __metadata("design:returntype", void 0)
 ], AuthResolver.prototype, "registerWithEmail", null);
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('email')),
-    __param(1, graphql_1.Args('password')),
-    __param(2, graphql_1.Args('phone')),
-    __param(3, graphql_1.Context('req')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('email')),
+    __param(1, (0, graphql_1.Args)('password')),
+    __param(2, (0, graphql_1.Args)('phone')),
+    __param(3, (0, graphql_1.Context)('req')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String, String, Object]),
     __metadata("design:returntype", Promise)
 ], AuthResolver.prototype, "loginWithEmail", null);
 AuthResolver = __decorate([
-    graphql_1.Resolver('Auth'),
+    (0, graphql_1.Resolver)('Auth'),
     __metadata("design:paramtypes", [auth_service_1.AuthService])
 ], AuthResolver);
 exports.AuthResolver = AuthResolver;

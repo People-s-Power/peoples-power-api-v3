@@ -137,7 +137,7 @@ let AuthService = class AuthService {
             await this.userModel.findByIdAndUpdate(user.id, {
                 $set: { emailToken: token === null || token === void 0 ? void 0 : token.toString() },
             });
-            await sendMail_1.sendMail(user === null || user === void 0 ? void 0 : user.email, 'Change Password', `Here is your verification code ${token}`);
+            await (0, sendMail_1.sendMail)(user === null || user === void 0 ? void 0 : user.email, 'Change Password', `Here is your verification code ${token}`);
             return user;
         }
         catch (error) {
@@ -166,7 +166,7 @@ let AuthService = class AuthService {
             if (!user)
                 throw new common_1.NotFoundException('Please enter your registered email address');
             const emailToken = (Math.floor(Math.random() * 90000) + 10000).toString();
-            await sendMail_1.sendMail(email, 'Verify your email', `Here is your verification code ${emailToken}`).catch((err) => {
+            await (0, sendMail_1.sendMail)(email, 'Verify your email', `Here is your verification code ${emailToken}`).catch((err) => {
                 throw err;
             });
             user = await this.userModel.findByIdAndUpdate(user.id, {
@@ -192,7 +192,7 @@ let AuthService = class AuthService {
             user = await this.userModel.findByIdAndUpdate(data.id, {
                 $set: { password: bcrypt.hashSync(data.newPassword, 10) },
             });
-            await sendMail_1.sendMail(user === null || user === void 0 ? void 0 : user.email, 'Change Password', `Your password was changed successfully. If you did not change it, click <a href="https://edfhr.org/auth?mode=change password&&id=${user === null || user === void 0 ? void 0 : user.id}">here</a> to reset your password again`);
+            await (0, sendMail_1.sendMail)(user === null || user === void 0 ? void 0 : user.email, 'Change Password', `Your password was changed successfully. If you did not change it, click <a href="https://edfhr.org/auth?mode=change password&&id=${user === null || user === void 0 ? void 0 : user.id}">here</a> to reset your password again`);
             return user;
         }
         catch (error) {
@@ -200,7 +200,7 @@ let AuthService = class AuthService {
         }
     }
     async verifyUser(token) {
-        const validToken = jsonwebtoken_1.verify(token, config_1.default.SECRET, (err) => {
+        const validToken = (0, jsonwebtoken_1.verify)(token, config_1.default.SECRET, (err) => {
             if (err)
                 throw new common_1.BadRequestException(err);
         });
@@ -216,9 +216,9 @@ let AuthService = class AuthService {
     }
 };
 AuthService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(user_schema_1.User.name)),
-    __param(1, common_1.Inject(core_1.REQUEST)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(user_schema_1.User.name)),
+    __param(1, (0, common_1.Inject)(core_1.REQUEST)),
     __metadata("design:paramtypes", [mongoose_2.Model, Object, jwt_1.JwtService])
 ], AuthService);
 exports.AuthService = AuthService;

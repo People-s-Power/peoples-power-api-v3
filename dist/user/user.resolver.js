@@ -43,49 +43,49 @@ let UserResolver = class UserResolver {
     }
 };
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_guard_1.CurrentUser()),
-    __param(1, graphql_1.Args('role')),
-    __param(2, graphql_1.Args('accountType')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_guard_1.CurrentUser)()),
+    __param(1, (0, graphql_1.Args)('role')),
+    __param(2, (0, graphql_1.Args)('accountType')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, String, String]),
     __metadata("design:returntype", Promise)
 ], UserResolver.prototype, "getUsers", null);
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UserResolver.prototype, "deleteUser", null);
 __decorate([
-    graphql_1.Mutation(),
+    (0, graphql_1.Mutation)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], UserResolver.prototype, "deleteManyUser", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UserResolver.prototype, "getUser", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UserResolver.prototype, "getUserApplicants", null);
 __decorate([
-    graphql_1.Query(),
+    (0, graphql_1.Query)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], UserResolver.prototype, "seedUsers", null);
 UserResolver = __decorate([
-    graphql_1.Resolver('User'),
+    (0, graphql_1.Resolver)('User'),
     __metadata("design:paramtypes", [user_service_1.UserService,
         applicant_service_1.ApplicantService])
 ], UserResolver);

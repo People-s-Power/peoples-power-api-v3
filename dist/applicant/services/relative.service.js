@@ -87,7 +87,7 @@ let RelativeService = class RelativeService {
         }
     }
     async seedRelatives() {
-        let fakeRelatives = await connectDb_1.connectOldDB('relatives');
+        let fakeRelatives = await (0, connectDb_1.connectOldDB)('relatives');
         fakeRelatives = [...fakeRelatives];
         const newRelatives = fakeRelatives.map((relative) => {
             return Object.assign(Object.assign({}, relative), { applicant_id: relative === null || relative === void 0 ? void 0 : relative.applicant_id, phone: (relative === null || relative === void 0 ? void 0 : relative.phone) || '00000000000', email: (relative === null || relative === void 0 ? void 0 : relative.email) || '', name: (relative === null || relative === void 0 ? void 0 : relative.name) || 'no name' });
@@ -102,8 +102,8 @@ let RelativeService = class RelativeService {
     }
 };
 RelativeService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(relative_schema_1.Relative.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(relative_schema_1.Relative.name)),
     __metadata("design:paramtypes", [mongoose_2.Model,
         applicant_service_1.ApplicantService])
 ], RelativeService);

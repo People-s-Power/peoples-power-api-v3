@@ -14,42 +14,42 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateAffidavitDTO {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateAffidavitDTO.prototype, "name", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateAffidavitDTO.prototype, "address", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateAffidavitDTO.prototype, "title", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateAffidavitDTO.prototype, "religion", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateAffidavitDTO.prototype, "occupation", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateAffidavitDTO.prototype, "rel", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateAffidavitDTO.prototype, "gender", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", Object)
 ], CreateAffidavitDTO.prototype, "applicant", void 0);
 exports.CreateAffidavitDTO = CreateAffidavitDTO;
-class UpdateAffidavitDTO extends swagger_1.PartialType(CreateAffidavitDTO) {
+class UpdateAffidavitDTO extends (0, swagger_1.PartialType)(CreateAffidavitDTO) {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateAffidavitDTO.prototype, "id", void 0);
 exports.UpdateAffidavitDTO = UpdateAffidavitDTO;

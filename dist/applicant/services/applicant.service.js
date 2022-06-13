@@ -76,7 +76,7 @@ let ApplicantService = class ApplicantService {
         }
     }
     async create(data, user) {
-        const contact_form = await cloudinary_1.cloudinaryUpload(data.contact_form).catch((err) => {
+        const contact_form = await (0, cloudinary_1.cloudinaryUpload)(data.contact_form).catch((err) => {
             throw err;
         });
         if (!user.id)
@@ -218,7 +218,7 @@ let ApplicantService = class ApplicantService {
     }
     async uploadContactForm(data) {
         try {
-            const contact_form = await cloudinary_1.cloudinaryUpload(data.contact_form).catch((err) => {
+            const contact_form = await (0, cloudinary_1.cloudinaryUpload)(data.contact_form).catch((err) => {
                 throw err;
             });
             const applicant = await this.applicantRepo.findByIdAndUpdate(data.applicant_id, { $set: { contact_form } });
@@ -253,7 +253,7 @@ let ApplicantService = class ApplicantService {
         }
     }
     async seedApplicants() {
-        let fakeApplicants = (await connectDb_1.connectOldDB('applicants'));
+        let fakeApplicants = (await (0, connectDb_1.connectOldDB)('applicants'));
         fakeApplicants = [...fakeApplicants];
         const newApplicants = fakeApplicants.map((applicant) => {
             const _id = applicant._id;
@@ -274,12 +274,12 @@ let ApplicantService = class ApplicantService {
     }
 };
 ApplicantService = __decorate([
-    common_1.Injectable(),
-    __param(1, mongoose_1.InjectModel(applicant_shema_1.Applicant.name)),
-    __param(2, mongoose_1.InjectModel(user_schema_1.User.name)),
-    __param(3, mongoose_1.InjectModel(affidavit_schema_1.Affidavit.name)),
-    __param(4, common_1.Inject(common_1.CACHE_MANAGER)),
-    __param(5, common_1.Inject(core_1.REQUEST)),
+    (0, common_1.Injectable)(),
+    __param(1, (0, mongoose_1.InjectModel)(applicant_shema_1.Applicant.name)),
+    __param(2, (0, mongoose_1.InjectModel)(user_schema_1.User.name)),
+    __param(3, (0, mongoose_1.InjectModel)(affidavit_schema_1.Affidavit.name)),
+    __param(4, (0, common_1.Inject)(common_1.CACHE_MANAGER)),
+    __param(5, (0, common_1.Inject)(core_1.REQUEST)),
     __metadata("design:paramtypes", [report_service_1.ReportService,
         mongoose_2.Model,
         mongoose_2.Model,

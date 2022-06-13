@@ -51,71 +51,71 @@ let ApplicantController = class ApplicantController {
     }
 };
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Post(),
-    __param(0, common_1.Body()),
-    __param(1, common_1.Req()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [applicant_dto_1.CreateApplicantDTO, Object]),
     __metadata("design:returntype", Promise)
 ], ApplicantController.prototype, "create", null);
 __decorate([
-    common_1.Get(),
-    __param(0, common_1.Req()),
+    (0, common_1.Get)(),
+    __param(0, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], ApplicantController.prototype, "findAll", null);
 __decorate([
-    common_1.Get('/single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('/single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ApplicantController.prototype, "findOne", null);
 __decorate([
-    common_1.Get('/draft/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('/draft/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ApplicantController.prototype, "draft", null);
 __decorate([
-    common_1.Put(),
-    __param(0, common_1.Body()),
+    (0, common_1.Put)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [applicant_dto_1.UpdateApplicantDTO]),
     __metadata("design:returntype", void 0)
 ], ApplicantController.prototype, "updateApplicant", null);
 __decorate([
-    common_1.Delete('/single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Delete)('/single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ApplicantController.prototype, "delete", null);
 __decorate([
-    common_1.Post('assign'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('assign'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [applicant_dto_1.AssignApplicantDTO]),
     __metadata("design:returntype", Promise)
 ], ApplicantController.prototype, "assign", null);
 __decorate([
-    common_1.Put('/upload'),
-    __param(0, common_1.Body()),
+    (0, common_1.Put)('/upload'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [applicant_dto_1.UploadContactFormDTO]),
     __metadata("design:returntype", Promise)
 ], ApplicantController.prototype, "uploadContactForm", null);
 __decorate([
-    common_1.Post('/seed'),
+    (0, common_1.Post)('/seed'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], ApplicantController.prototype, "seedApplicants", null);
 ApplicantController = __decorate([
-    common_1.Controller('api/v3/applicant'),
+    (0, common_1.Controller)('api/v3/applicant'),
     __metadata("design:paramtypes", [applicant_service_1.ApplicantService])
 ], ApplicantController);
 exports.ApplicantController = ApplicantController;

@@ -42,7 +42,7 @@ let CampaignService = class CampaignService {
         const author = user === null || user === void 0 ? void 0 : user.id;
         if (!author)
             throw new common_1.UnauthorizedException('No author');
-        const image = await cloudinary_1.cloudinaryUpload(data.image).catch((err) => {
+        const image = await (0, cloudinary_1.cloudinaryUpload)(data.image).catch((err) => {
             throw err;
         });
         const { body } = data;
@@ -108,7 +108,7 @@ let CampaignService = class CampaignService {
         try {
             const campaign = await this.campaignModel.findOneAndUpdate({ _id: data.id }, data, { new: true });
             const author = await this.userModel.findById(campaign.author);
-            await sendMaijet_1.updateCampMail(campaign.title, author.email, author.name);
+            await (0, sendMaijet_1.updateCampMail)(campaign.title, author.email, author.name);
             return campaign;
         }
         catch (error) {
@@ -227,7 +227,7 @@ let CampaignService = class CampaignService {
             const author = await this.userModel.findById(campaign.author);
             campaign.views.push(userId);
             campaign.save();
-            await sendMaijet_1.viewCampMail(campaign.title, user === null || user === void 0 ? void 0 : user.name, author.email, author.name);
+            await (0, sendMaijet_1.viewCampMail)(campaign.title, user === null || user === void 0 ? void 0 : user.name, author.email, author.name);
             return 'Viewer Added';
         }
         catch (error) {
@@ -294,13 +294,13 @@ let CampaignService = class CampaignService {
     }
 };
 CampaignService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(user_schema_1.User.name)),
-    __param(1, mongoose_1.InjectModel(campaign_schema_1.View.name)),
-    __param(2, mongoose_1.InjectModel(campaign_schema_1.Campaign.name)),
-    __param(3, mongoose_1.InjectModel(endorsement_schema_1.Endorsement.name)),
-    __param(4, mongoose_1.InjectModel(notification_schema_1.Notice.name)),
-    __param(6, mongoose_1.InjectConnection()),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(user_schema_1.User.name)),
+    __param(1, (0, mongoose_1.InjectModel)(campaign_schema_1.View.name)),
+    __param(2, (0, mongoose_1.InjectModel)(campaign_schema_1.Campaign.name)),
+    __param(3, (0, mongoose_1.InjectModel)(endorsement_schema_1.Endorsement.name)),
+    __param(4, (0, mongoose_1.InjectModel)(notification_schema_1.Notice.name)),
+    __param(6, (0, mongoose_1.InjectConnection)()),
     __metadata("design:paramtypes", [mongoose_2.Model,
         mongoose_2.Model,
         mongoose_2.Model,

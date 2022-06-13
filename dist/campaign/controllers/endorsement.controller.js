@@ -42,53 +42,53 @@ let EndorsementController = class EndorsementController {
     }
 };
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], EndorsementController.prototype, "findAll", null);
 __decorate([
-    common_1.Get('/single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('/single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], EndorsementController.prototype, "findOne", null);
 __decorate([
-    common_1.Get('/campaign/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('/campaign/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], EndorsementController.prototype, "findByCampaign", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Post(),
-    __param(0, common_1.Body()),
-    __param(1, common_1.Req()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [endorsement_dto_1.CreateEndorsementDTO, Object]),
     __metadata("design:returntype", void 0)
 ], EndorsementController.prototype, "create", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Put(),
-    __param(0, common_1.Body()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Put)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [endorsement_dto_1.UpdateEndorsementDTO]),
     __metadata("design:returntype", void 0)
 ], EndorsementController.prototype, "update", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Post('like'),
-    __param(0, common_1.Body()),
-    __param(1, common_1.Req()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Post)('like'),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [endorsement_dto_1.LikeEndorsementDTO, Object]),
     __metadata("design:returntype", void 0)
 ], EndorsementController.prototype, "like", null);
 EndorsementController = __decorate([
-    common_1.Controller('api/v3/endorsement'),
+    (0, common_1.Controller)('api/v3/endorsement'),
     __metadata("design:paramtypes", [endorsement_service_1.EndorsementService])
 ], EndorsementController);
 exports.EndorsementController = EndorsementController;

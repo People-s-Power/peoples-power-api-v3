@@ -82,40 +82,40 @@ let CampaignGateway = class CampaignGateway {
     }
 };
 __decorate([
-    websockets_1.WebSocketServer(),
+    (0, websockets_1.WebSocketServer)(),
     __metadata("design:type", ws_1.Server)
 ], CampaignGateway.prototype, "server", void 0);
 __decorate([
-    common_1.UseGuards(local_guard_1.WsGuard),
-    websockets_1.SubscribeMessage(campaign_interface_1.CampaignSocketEnum.Created),
-    __param(0, websockets_1.MessageBody()),
+    (0, common_1.UseGuards)(local_guard_1.WsGuard),
+    (0, websockets_1.SubscribeMessage)(campaign_interface_1.CampaignSocketEnum.Created),
+    __param(0, (0, websockets_1.MessageBody)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], CampaignGateway.prototype, "createdCampaign", null);
 __decorate([
-    websockets_1.SubscribeMessage(campaign_interface_1.CampaignSocketEnum.Endorsed),
-    __param(0, websockets_1.MessageBody()),
+    (0, websockets_1.SubscribeMessage)(campaign_interface_1.CampaignSocketEnum.Endorsed),
+    __param(0, (0, websockets_1.MessageBody)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], CampaignGateway.prototype, "endorsedCampaign", null);
 __decorate([
-    websockets_1.SubscribeMessage(campaign_interface_1.CampaignSocketEnum.Get),
+    (0, websockets_1.SubscribeMessage)(campaign_interface_1.CampaignSocketEnum.Get),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], CampaignGateway.prototype, "getCampaignNotice", null);
 __decorate([
-    websockets_1.SubscribeMessage(campaign_interface_1.CampaignSocketEnum.Get),
+    (0, websockets_1.SubscribeMessage)(campaign_interface_1.CampaignSocketEnum.Get),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], CampaignGateway.prototype, "getAllNotice", null);
 CampaignGateway = __decorate([
-    websockets_1.WebSocketGateway({ cors: true }),
-    __param(0, mongoose_1.InjectModel(notification_schema_1.Notice.name)),
-    __param(1, mongoose_1.InjectModel(campaign_schema_1.Campaign.name)),
+    (0, websockets_1.WebSocketGateway)({ cors: true }),
+    __param(0, (0, mongoose_1.InjectModel)(notification_schema_1.Notice.name)),
+    __param(1, (0, mongoose_1.InjectModel)(campaign_schema_1.Campaign.name)),
     __metadata("design:paramtypes", [mongoose_2.Model,
         mongoose_2.Model])
 ], CampaignGateway);

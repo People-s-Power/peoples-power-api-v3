@@ -15,7 +15,7 @@ const env_schema_1 = require("./env.schema");
 let EnvModule = class EnvModule {
 };
 EnvModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         providers: [env_resolver_1.EnvResolver, env_service_1.EnvService],
         imports: [mongoose_1.MongooseModule.forFeature([{ name: env_schema_1.Env.name, schema: env_schema_1.EnvSchema }])],
     })

@@ -104,7 +104,7 @@ let AffidavitService = class AffidavitService {
         }
     }
     async seedAffidavit() {
-        let fakeAffidavits = (await connectDb_1.connectOldDB('affidavits'));
+        let fakeAffidavits = (await (0, connectDb_1.connectOldDB)('affidavits'));
         fakeAffidavits = [...fakeAffidavits];
         const newAffidavit = fakeAffidavits.map((affidavit) => {
             const _id = affidavit === null || affidavit === void 0 ? void 0 : affidavit._id;
@@ -125,9 +125,9 @@ let AffidavitService = class AffidavitService {
     }
 };
 AffidavitService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(affidavit_schema_1.Affidavit.name)),
-    __param(1, mongoose_1.InjectModel(applicant_shema_1.Applicant.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(affidavit_schema_1.Affidavit.name)),
+    __param(1, (0, mongoose_1.InjectModel)(applicant_shema_1.Applicant.name)),
     __metadata("design:paramtypes", [mongoose_2.Model,
         mongoose_2.Model])
 ], AffidavitService);

@@ -30,27 +30,27 @@ let AppController = class AppController {
     }
 };
 __decorate([
-    common_1.Get(),
-    common_1.Render('index'),
+    (0, common_1.Get)(),
+    (0, common_1.Render)('index'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "getHello", null);
 __decorate([
-    common_1.Get('api/v3'),
+    (0, common_1.Get)('api/v3'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "renderV3", null);
 __decorate([
-    common_1.Post('api/v3/convert'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('api/v3/convert'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AppController.prototype, "conver", null);
 AppController = __decorate([
-    common_1.Controller(),
+    (0, common_1.Controller)(),
     __metadata("design:paramtypes", [app_service_1.AppService])
 ], AppController);
 exports.AppController = AppController;

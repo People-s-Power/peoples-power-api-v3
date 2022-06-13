@@ -24,7 +24,7 @@ let ExhibitService = class ExhibitService {
         this.exhibitModel = exhibitModel;
     }
     async create(data) {
-        const image = await cloudinary_1.cloudinaryUpload(data.image).catch((err) => {
+        const image = await (0, cloudinary_1.cloudinaryUpload)(data.image).catch((err) => {
             throw err;
         });
         try {
@@ -86,7 +86,7 @@ let ExhibitService = class ExhibitService {
         }
     }
     async seedExhibits() {
-        const fakeExhibits = (await connectDb_1.connectOldDB('exhibits'));
+        const fakeExhibits = (await (0, connectDb_1.connectOldDB)('exhibits'));
         const newExhibits = fakeExhibits.map((exhibit) => {
             var _a, _b;
             const image = ((_a = exhibit === null || exhibit === void 0 ? void 0 : exhibit.image) === null || _a === void 0 ? void 0 : _a.includes('https://edfhr-dashboard-724077.us1.kinto.io/uploads/')) || ((_b = exhibit === null || exhibit === void 0 ? void 0 : exhibit.image) === null || _b === void 0 ? void 0 : _b.includes('undefined/upload'))
@@ -109,8 +109,8 @@ let ExhibitService = class ExhibitService {
     }
 };
 ExhibitService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(exhibit_schema_1.Exhibit.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(exhibit_schema_1.Exhibit.name)),
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], ExhibitService);
 exports.ExhibitService = ExhibitService;

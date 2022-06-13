@@ -7,7 +7,7 @@ const socket_io_redis_1 = require("socket.io-redis");
 const config_1 = require("./config");
 const pubClient = new redis_1.RedisClient({ url: config_1.default.REDIS_URI });
 const subClient = pubClient.duplicate();
-const redisAdapter = socket_io_redis_1.createAdapter({ pubClient, subClient });
+const redisAdapter = (0, socket_io_redis_1.createAdapter)({ pubClient, subClient });
 class RedisIoAdapter extends platform_socket_io_1.IoAdapter {
     constructor(app) {
         super(app);

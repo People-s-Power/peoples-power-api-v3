@@ -82,92 +82,92 @@ let AuthController = class AuthController {
     }
 };
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], AuthController.prototype, "home", null);
 __decorate([
-    common_1.Get('me'),
-    common_1.UseGuards(jwt_guard_1.JwtAuthGuard),
-    __param(0, common_1.Req()),
+    (0, common_1.Get)('me'),
+    (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
+    __param(0, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "me", null);
 __decorate([
-    common_1.Post('login'),
-    swagger_1.ApiParam({
+    (0, common_1.Post)('login'),
+    (0, swagger_1.ApiParam)({
         type: user_dto_1.LoginWithEmailDTO,
         name: 'login',
     }),
-    __param(0, common_1.Body()),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "login", null);
 __decorate([
-    common_1.Post('register'),
-    __param(0, common_1.Body()),
-    __param(1, common_1.Session()),
+    (0, common_1.Post)('register'),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Session)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_dto_1.RegisterWithEmailDTO, Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "register", null);
 __decorate([
-    common_1.Post('register-google'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('register-google'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "registerWithGoogleAndFacebook", null);
 __decorate([
-    common_1.Post('google-facebook'),
-    __param(0, common_1.Req()),
-    __param(1, common_1.Body()),
+    (0, common_1.Post)('google-facebook'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "googleAndFacebook", null);
 __decorate([
-    common_1.Get('logout'),
-    __param(0, common_1.Req()),
-    __param(1, common_1.Res({ passthrough: true })),
+    (0, common_1.Get)('logout'),
+    __param(0, (0, common_1.Req)()),
+    __param(1, (0, common_1.Res)({ passthrough: true })),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], AuthController.prototype, "logout", null);
 __decorate([
-    common_1.Post('forgot-password'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('forgot-password'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "forgotPassword", null);
 __decorate([
-    common_1.Post('verify-token'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('verify-token'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "verifyToken", null);
 __decorate([
-    common_1.Post('resend-token'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('resend-token'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "resendToken", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Post('change-password'),
-    __param(0, common_1.Body()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Post)('change-password'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_dto_1.ChangePasswordDTO]),
     __metadata("design:returntype", Promise)
 ], AuthController.prototype, "changePassword", null);
 AuthController = __decorate([
-    common_1.Controller('api/v3/auth'),
+    (0, common_1.Controller)('api/v3/auth'),
     __metadata("design:paramtypes", [auth_service_1.AuthService])
 ], AuthController);
 exports.AuthController = AuthController;

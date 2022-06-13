@@ -47,58 +47,58 @@ let ApplicantResolver = class ApplicantResolver {
     }
 };
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_guard_1.CurrentUser()),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_guard_1.CurrentUser)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], ApplicantResolver.prototype, "getApplicants", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ApplicantResolver.prototype, "getApplicant", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ApplicantResolver.prototype, "getUserApplicants", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ApplicantResolver.prototype, "showDraft", null);
 __decorate([
-    common_1.UseGuards(graphql_guard_1.GQLGuard),
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('input')),
-    __param(1, graphql_1.Context('req')),
+    (0, common_1.UseGuards)(graphql_guard_1.GQLGuard),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('input')),
+    __param(1, (0, graphql_1.Context)('req')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [applicant_shema_1.Applicant, Object]),
     __metadata("design:returntype", Promise)
 ], ApplicantResolver.prototype, "createApplicant", null);
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ApplicantResolver.prototype, "deleteApplicant", null);
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('input')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('input')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [applicant_dto_1.UploadContactFormDTO]),
     __metadata("design:returntype", Promise)
 ], ApplicantResolver.prototype, "uploadForm", null);
 ApplicantResolver = __decorate([
-    graphql_1.Resolver('Applicant'),
+    (0, graphql_1.Resolver)('Applicant'),
     __metadata("design:paramtypes", [applicant_service_1.ApplicantService])
 ], ApplicantResolver);
 exports.ApplicantResolver = ApplicantResolver;

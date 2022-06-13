@@ -33,28 +33,28 @@ let TransactionController = class TransactionController {
     }
 };
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], TransactionController.prototype, "home", null);
 __decorate([
-    common_1.Get('verify/:reference'),
-    __param(0, common_1.Param('reference')),
+    (0, common_1.Get)('verify/:reference'),
+    __param(0, (0, common_1.Param)('reference')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], TransactionController.prototype, "verify", null);
 __decorate([
-    common_1.Post('webhook'),
-    __param(0, common_1.Body()),
-    __param(1, common_1.Res()),
+    (0, common_1.Post)('webhook'),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Res)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], TransactionController.prototype, "webhook", null);
 TransactionController = __decorate([
-    common_1.Controller('api/v3/transaction'),
+    (0, common_1.Controller)('api/v3/transaction'),
     __metadata("design:paramtypes", [transaction_service_1.TransactionService])
 ], TransactionController);
 exports.TransactionController = TransactionController;

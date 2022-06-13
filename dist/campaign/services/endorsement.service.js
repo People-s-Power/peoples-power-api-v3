@@ -48,7 +48,7 @@ let EndorsementService = class EndorsementService {
                 user,
             });
             const author = await this.userModel.findById(campaign1.author);
-            await sendMaijet_1.endorsedCampMail(campaign1.title, campaign1.endorsements.length, author.email, author.name);
+            await (0, sendMaijet_1.endorsedCampMail)(campaign1.title, campaign1.endorsements.length, author.email, author.name);
             return endorsement;
         }
         catch (error) {
@@ -145,10 +145,10 @@ let EndorsementService = class EndorsementService {
     }
 };
 EndorsementService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(user_schema_1.User.name)),
-    __param(1, mongoose_1.InjectModel(endorsement_schema_1.Endorsement.name)),
-    __param(2, mongoose_1.InjectModel(campaign_schema_1.Campaign.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(user_schema_1.User.name)),
+    __param(1, (0, mongoose_1.InjectModel)(endorsement_schema_1.Endorsement.name)),
+    __param(2, (0, mongoose_1.InjectModel)(campaign_schema_1.Campaign.name)),
     __metadata("design:paramtypes", [mongoose_2.Model,
         mongoose_2.Model,
         mongoose_2.Model,

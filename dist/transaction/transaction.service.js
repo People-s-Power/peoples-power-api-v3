@@ -73,9 +73,9 @@ let TransactionService = class TransactionService {
     }
 };
 TransactionService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(transaction_schema_1.Transaction.name)),
-    __param(1, mongoose_1.InjectModel(campaign_schema_1.Campaign.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(transaction_schema_1.Transaction.name)),
+    __param(1, (0, mongoose_1.InjectModel)(campaign_schema_1.Campaign.name)),
     __metadata("design:paramtypes", [mongoose_2.Model,
         mongoose_2.Model])
 ], TransactionService);

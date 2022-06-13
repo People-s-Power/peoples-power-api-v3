@@ -43,54 +43,54 @@ let ExhibitController = class ExhibitController {
     }
 };
 __decorate([
-    common_1.Post(),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [exhibit_dto_1.CreateExhibitDTO]),
     __metadata("design:returntype", void 0)
 ], ExhibitController.prototype, "create", null);
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], ExhibitController.prototype, "findAll", null);
 __decorate([
-    common_1.Get('single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ExhibitController.prototype, "findOne", null);
 __decorate([
-    common_1.Put(),
-    __param(0, common_1.Body()),
+    (0, common_1.Put)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [exhibit_dto_1.UpdateExhibitDTO]),
     __metadata("design:returntype", void 0)
 ], ExhibitController.prototype, "update", null);
 __decorate([
-    common_1.Delete('/single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Delete)('/single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ExhibitController.prototype, "delete", null);
 __decorate([
-    common_1.Get('applicant/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('applicant/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], ExhibitController.prototype, "findByApplicant", null);
 __decorate([
-    common_1.Post('seed'),
+    (0, common_1.Post)('seed'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], ExhibitController.prototype, "seedExhibits", null);
 ExhibitController = __decorate([
-    common_1.Controller('api/v3/exhibit'),
+    (0, common_1.Controller)('api/v3/exhibit'),
     __metadata("design:paramtypes", [exhibit_service_1.ExhibitService])
 ], ExhibitController);
 exports.ExhibitController = ExhibitController;

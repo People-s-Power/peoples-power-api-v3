@@ -37,35 +37,35 @@ let ReportResolver = class ReportResolver {
     }
 };
 __decorate([
-    graphql_1.Query(),
+    (0, graphql_1.Query)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], ReportResolver.prototype, "getReports", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('_id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('_id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ReportResolver.prototype, "getReport", null);
 __decorate([
-    common_1.UseGuards(graphql_guard_1.GQLGuard),
-    graphql_1.Query(),
-    __param(0, graphql_1.Context('req')),
+    (0, common_1.UseGuards)(graphql_guard_1.GQLGuard),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Context)('req')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], ReportResolver.prototype, "getMyReports", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('applicant_id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('applicant_id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], ReportResolver.prototype, "getApplicantsReport", null);
 ReportResolver = __decorate([
-    graphql_1.Resolver(),
+    (0, graphql_1.Resolver)(),
     __metadata("design:paramtypes", [report_service_1.ReportService,
         rep_comment_service_1.RepCommentService])
 ], ReportResolver);

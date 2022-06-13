@@ -94,7 +94,7 @@ let UserService = class UserService {
     }
     async uploadProfileImage(data) {
         try {
-            const image = await cloudinary_1.cloudinaryUpload(data.image);
+            const image = await (0, cloudinary_1.cloudinaryUpload)(data.image);
             const user = await this.userModel.findByIdAndUpdate(data.id, { $set: { image } }, { new: true });
             return user;
         }
@@ -178,7 +178,7 @@ let UserService = class UserService {
         }
     }
     async uploadImage(file, user) {
-        const image = await cloudinary_1.cloudinaryUpload(file).catch((err) => {
+        const image = await (0, cloudinary_1.cloudinaryUpload)(file).catch((err) => {
             console.log(err);
             throw new Error('Problem with uploading image');
         });
@@ -216,7 +216,7 @@ let UserService = class UserService {
         }
     }
     async seedUsers() {
-        const users = await connectDb_1.connectOldDB('users');
+        const users = await (0, connectDb_1.connectOldDB)('users');
         const fakeUsers = [...users];
         const newUsers = fakeUsers === null || fakeUsers === void 0 ? void 0 : fakeUsers.map((user) => {
             const firstName = user === null || user === void 0 ? void 0 : user.name.split(' ')[0];
@@ -272,10 +272,10 @@ let UserService = class UserService {
     }
 };
 UserService = __decorate([
-    common_1.Injectable(),
-    __param(0, common_1.Inject(common_1.CACHE_MANAGER)),
-    __param(1, mongoose_1.InjectModel(user_schema_1.User.name)),
-    __param(2, mongoose_1.InjectModel(applicant_shema_1.Applicant.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, common_1.Inject)(common_1.CACHE_MANAGER)),
+    __param(1, (0, mongoose_1.InjectModel)(user_schema_1.User.name)),
+    __param(2, (0, mongoose_1.InjectModel)(applicant_shema_1.Applicant.name)),
     __metadata("design:paramtypes", [Object, mongoose_2.Model,
         mongoose_2.Model])
 ], UserService);

@@ -39,45 +39,45 @@ let EnvResolver = class EnvResolver {
     }
 };
 __decorate([
-    graphql_1.Query(),
+    (0, graphql_1.Query)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], EnvResolver.prototype, "getEnvs", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], EnvResolver.prototype, "getEnv", null);
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('input')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('input')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], EnvResolver.prototype, "createEnv", null);
 __decorate([
-    common_1.UseGuards(graphql_guard_1.GQLGuard),
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('input')),
-    __param(1, graphql_guard_1.CurrentUser()),
+    (0, common_1.UseGuards)(graphql_guard_1.GQLGuard),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('input')),
+    __param(1, (0, graphql_guard_1.CurrentUser)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", void 0)
 ], EnvResolver.prototype, "updateEnv", null);
 __decorate([
-    common_1.UseGuards(graphql_guard_1.GQLGuard),
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('id')),
-    __param(1, graphql_guard_1.CurrentUser()),
+    (0, common_1.UseGuards)(graphql_guard_1.GQLGuard),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('id')),
+    __param(1, (0, graphql_guard_1.CurrentUser)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", void 0)
 ], EnvResolver.prototype, "deleteEnv", null);
 EnvResolver = __decorate([
-    graphql_1.Resolver('Env'),
+    (0, graphql_1.Resolver)('Env'),
     __metadata("design:paramtypes", [env_service_1.EnvService])
 ], EnvResolver);
 exports.EnvResolver = EnvResolver;

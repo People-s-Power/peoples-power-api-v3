@@ -40,8 +40,8 @@ let NotificationService = class NotificationService {
     }
 };
 NotificationService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(notification_schema_1.Notice.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(notification_schema_1.Notice.name)),
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], NotificationService);
 exports.NotificationService = NotificationService;

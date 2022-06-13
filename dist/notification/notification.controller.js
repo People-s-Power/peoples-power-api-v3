@@ -22,13 +22,13 @@ let NotificationController = class NotificationController {
     }
 };
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], NotificationController.prototype, "findAll", null);
 NotificationController = __decorate([
-    common_1.Controller('notification'),
+    (0, common_1.Controller)('notification'),
     __metadata("design:paramtypes", [notification_service_1.NotificationService])
 ], NotificationController);
 exports.NotificationController = NotificationController;

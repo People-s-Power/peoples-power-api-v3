@@ -24,14 +24,14 @@ let RelativeResolver = class RelativeResolver {
     }
 };
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('applicant_id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('applicant_id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], RelativeResolver.prototype, "getRelativesByApplicant", null);
 RelativeResolver = __decorate([
-    graphql_1.Resolver(),
+    (0, graphql_1.Resolver)(),
     __metadata("design:paramtypes", [relative_service_1.RelativeService])
 ], RelativeResolver);
 exports.RelativeResolver = RelativeResolver;

@@ -36,36 +36,36 @@ let EndorsementResolver = class EndorsementResolver {
     }
 };
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('campaign_id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('campaign_id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], EndorsementResolver.prototype, "getEndorsementsByCampaign", null);
 __decorate([
-    graphql_1.Query(),
+    (0, graphql_1.Query)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], EndorsementResolver.prototype, "getEndorsements", null);
 __decorate([
-    common_1.UseGuards(graphql_guard_1.GQLGuard),
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('input')),
-    __param(1, graphql_1.Context('req')),
+    (0, common_1.UseGuards)(graphql_guard_1.GQLGuard),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('input')),
+    __param(1, (0, graphql_1.Context)('req')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [endorsement_dto_1.CreateEndorsementDTO, Object]),
     __metadata("design:returntype", Promise)
 ], EndorsementResolver.prototype, "createEndorsement", null);
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], EndorsementResolver.prototype, "deleteEndorsement", null);
 EndorsementResolver = __decorate([
-    graphql_1.Resolver(),
+    (0, graphql_1.Resolver)(),
     __metadata("design:paramtypes", [endorsement_service_1.EndorsementService])
 ], EndorsementResolver);
 exports.EndorsementResolver = EndorsementResolver;

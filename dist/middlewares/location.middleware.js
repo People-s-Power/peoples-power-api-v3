@@ -25,7 +25,7 @@ let LocationMiddleware = class LocationMiddleware {
     }
 };
 LocationMiddleware = __decorate([
-    common_1.Injectable()
+    (0, common_1.Injectable)()
 ], LocationMiddleware);
 exports.LocationMiddleware = LocationMiddleware;
 //# sourceMappingURL=location.middleware.js.map

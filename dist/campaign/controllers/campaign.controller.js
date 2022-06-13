@@ -63,91 +63,91 @@ let CampaignController = class CampaignController {
     }
 };
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Post(),
-    __param(0, common_1.Body()),
-    __param(1, common_1.Req()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [campaign_dto_1.CreateCampaignDTO, Object]),
     __metadata("design:returntype", void 0)
 ], CampaignController.prototype, "create", null);
 __decorate([
-    common_1.Get('session/:id'),
-    __param(0, common_1.Param('id')),
-    __param(1, common_1.Req()),
+    (0, common_1.Get)('session/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", Promise)
 ], CampaignController.prototype, "getSession", null);
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], CampaignController.prototype, "findAll", null);
 __decorate([
-    common_1.Get('notice'),
-    __param(0, common_1.Query('model')),
+    (0, common_1.Get)('notice'),
+    __param(0, (0, common_1.Query)('model')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], CampaignController.prototype, "findAllNotice", null);
 __decorate([
-    common_1.Get(':slug'),
-    __param(0, common_1.Param('slug')),
+    (0, common_1.Get)(':slug'),
+    __param(0, (0, common_1.Param)('slug')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], CampaignController.prototype, "findOne", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Get('mycampaign'),
-    __param(0, common_1.Req()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Get)('mycampaign'),
+    __param(0, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], CampaignController.prototype, "myCampaign", null);
 __decorate([
-    common_1.Put(),
-    __param(0, common_1.Body()),
+    (0, common_1.Put)(),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [campaign_dto_1.UpdateCampaignDTO]),
     __metadata("design:returntype", void 0)
 ], CampaignController.prototype, "update", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Delete('/single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Delete)('/single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], CampaignController.prototype, "delete", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Post('like'),
-    __param(0, common_1.Body('id')),
-    __param(1, common_1.Req()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Post)('like'),
+    __param(0, (0, common_1.Body)('id')),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", Promise)
 ], CampaignController.prototype, "like", null);
 __decorate([
-    common_1.Post('approve'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('approve'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], CampaignController.prototype, "approveCampaign", null);
 __decorate([
-    common_1.Put('/viewCamp/:id'),
-    __param(0, common_1.Param('id')),
-    __param(1, common_1.Body()),
+    (0, common_1.Put)('/viewCamp/:id'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, Object]),
     __metadata("design:returntype", Promise)
 ], CampaignController.prototype, "viewCamp", null);
 CampaignController = __decorate([
-    common_1.Controller('api/v3/campaign'),
+    (0, common_1.Controller)('api/v3/campaign'),
     __metadata("design:paramtypes", [campaign_service_1.CampaignService,
         campaign_gateway_1.CampaignGateway])
 ], CampaignController);

@@ -14,22 +14,22 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateExhibitDTO {
 }
 __decorate([
-    swagger_1.ApiProperty({ required: true }),
+    (0, swagger_1.ApiProperty)({ required: true }),
     __metadata("design:type", String)
 ], CreateExhibitDTO.prototype, "name", void 0);
 __decorate([
-    swagger_1.ApiProperty({ required: true }),
+    (0, swagger_1.ApiProperty)({ required: true }),
     __metadata("design:type", String)
 ], CreateExhibitDTO.prototype, "image", void 0);
 __decorate([
-    swagger_1.ApiProperty({ required: true }),
+    (0, swagger_1.ApiProperty)({ required: true }),
     __metadata("design:type", String)
 ], CreateExhibitDTO.prototype, "applicant_id", void 0);
 exports.CreateExhibitDTO = CreateExhibitDTO;
-class UpdateExhibitDTO extends swagger_1.PartialType(CreateExhibitDTO) {
+class UpdateExhibitDTO extends (0, swagger_1.PartialType)(CreateExhibitDTO) {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateExhibitDTO.prototype, "id", void 0);
 exports.UpdateExhibitDTO = UpdateExhibitDTO;

@@ -41,42 +41,42 @@ let CampaignResolver = class CampaignResolver {
     }
 };
 __decorate([
-    common_1.UseGuards(graphql_guard_1.GQLGuard),
-    graphql_1.Query(),
-    __param(0, graphql_guard_1.CurrentUser()),
+    (0, common_1.UseGuards)(graphql_guard_1.GQLGuard),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_guard_1.CurrentUser)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], CampaignResolver.prototype, "myCampaign", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('limit')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('limit')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", Promise)
 ], CampaignResolver.prototype, "getCampaigns", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('slug')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('slug')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], CampaignResolver.prototype, "getCampaign", null);
 __decorate([
-    graphql_1.Query(),
+    (0, graphql_1.Query)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], CampaignResolver.prototype, "getActiveCampaigns", null);
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], CampaignResolver.prototype, "deleteCampaign", null);
 CampaignResolver = __decorate([
-    graphql_1.Resolver('Campaign'),
+    (0, graphql_1.Resolver)('Campaign'),
     __metadata("design:paramtypes", [campaign_service_1.CampaignService,
         endorsement_service_1.EndorsementService])
 ], CampaignResolver);

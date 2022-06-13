@@ -15,23 +15,23 @@ const mongoose_2 = require("mongoose");
 let Relative = class Relative {
 };
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Relative.prototype, "name", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Relative.prototype, "phone", void 0);
 __decorate([
-    mongoose_1.Prop({ required: false }),
+    (0, mongoose_1.Prop)({ required: false }),
     __metadata("design:type", String)
 ], Relative.prototype, "email", void 0);
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'Applicant' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'Applicant' }),
     __metadata("design:type", Object)
 ], Relative.prototype, "applicant_id", void 0);
 Relative = __decorate([
-    mongoose_1.Schema({
+    (0, mongoose_1.Schema)({
         timestamps: true,
         toJSON: {
             transform: (doc, ret) => {

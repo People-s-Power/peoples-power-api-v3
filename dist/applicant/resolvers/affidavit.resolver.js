@@ -40,47 +40,47 @@ let AffidavitResolver = class AffidavitResolver {
     }
 };
 __decorate([
-    graphql_1.Query(),
+    (0, graphql_1.Query)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], AffidavitResolver.prototype, "getAffidavits", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], AffidavitResolver.prototype, "getAffidavit", null);
 __decorate([
-    graphql_1.Query(),
-    __param(0, graphql_1.Args('applicant_id')),
+    (0, graphql_1.Query)(),
+    __param(0, (0, graphql_1.Args)('applicant_id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], AffidavitResolver.prototype, "getAffidavitByApplicant", null);
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('input')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('input')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [affidavit_schema_1.Affidavit]),
     __metadata("design:returntype", Promise)
 ], AffidavitResolver.prototype, "createAffidavit", null);
 __decorate([
-    graphql_1.Mutation(),
-    __param(0, graphql_1.Args('id')),
+    (0, graphql_1.Mutation)(),
+    __param(0, (0, graphql_1.Args)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], AffidavitResolver.prototype, "deleteAffidavit", null);
 __decorate([
-    graphql_1.Mutation(),
+    (0, graphql_1.Mutation)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], AffidavitResolver.prototype, "deleteManyAffidavit", null);
 AffidavitResolver = __decorate([
-    graphql_1.Resolver(),
+    (0, graphql_1.Resolver)(),
     __metadata("design:paramtypes", [affidavit_service_1.AffidavitService])
 ], AffidavitResolver);
 exports.AffidavitResolver = AffidavitResolver;

@@ -44,56 +44,56 @@ let RepCommentController = class RepCommentController {
     }
 };
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Post(),
-    __param(0, common_1.Body()),
-    __param(1, common_1.Req()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [report_dto_1.CreateRepCommentDTO, Object]),
     __metadata("design:returntype", void 0)
 ], RepCommentController.prototype, "create", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Put(),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Put)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [report_dto_1.UpdateRepCommentDTO]),
     __metadata("design:returntype", void 0)
 ], RepCommentController.prototype, "update", null);
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], RepCommentController.prototype, "findAll", null);
 __decorate([
-    common_1.Get('report/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('report/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], RepCommentController.prototype, "findByReport", null);
 __decorate([
-    common_1.Get('single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], RepCommentController.prototype, "findOne", null);
 __decorate([
-    common_1.Delete('single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Delete)('single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], RepCommentController.prototype, "delete", null);
 __decorate([
-    common_1.Post('seed'),
+    (0, common_1.Post)('seed'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], RepCommentController.prototype, "seed", null);
 RepCommentController = __decorate([
-    common_1.Controller('api/v3/rep-comment'),
+    (0, common_1.Controller)('api/v3/rep-comment'),
     __metadata("design:paramtypes", [rep_comment_service_1.RepCommentService])
 ], RepCommentController);
 exports.RepCommentController = RepCommentController;

@@ -11,7 +11,7 @@ const graphql_1 = require("@nestjs/graphql");
 let ExhibitResolver = class ExhibitResolver {
 };
 ExhibitResolver = __decorate([
-    graphql_1.Resolver()
+    (0, graphql_1.Resolver)()
 ], ExhibitResolver);
 exports.ExhibitResolver = ExhibitResolver;
 //# sourceMappingURL=exhibit.resolver.js.map

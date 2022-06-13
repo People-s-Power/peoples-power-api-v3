@@ -26,26 +26,19 @@
 
 FROM node:16-alpine
 
-RUN mkdir -p /app
+# RUN mkdir /usr/src/app
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY ./ ./
+COPY package*.json ./
 
 
 RUN yarn install
 
-
-RUN yarn build
-
-COPY ./ ./
-
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}}
-ENV PORT=8000
+COPY . .
 
 
-EXPOSE ${PORT}
-
-# CMD [ "yarn", "start:prod" ]
+ARG NODE_ENV=development
+ENV NODE_ENV=${NODE_ENV}
+CMD [ "yarn", "start:prod" ]
 

@@ -14,29 +14,29 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateEndorsementDTO {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateEndorsementDTO.prototype, "campaign", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateEndorsementDTO.prototype, "body", void 0);
 exports.CreateEndorsementDTO = CreateEndorsementDTO;
 class UpdateEndorsementDTO {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateEndorsementDTO.prototype, "id", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateEndorsementDTO.prototype, "body", void 0);
 exports.UpdateEndorsementDTO = UpdateEndorsementDTO;
 class LikeEndorsementDTO {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], LikeEndorsementDTO.prototype, "id", void 0);
 exports.LikeEndorsementDTO = LikeEndorsementDTO;

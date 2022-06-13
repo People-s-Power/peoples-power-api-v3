@@ -17,7 +17,7 @@ const transaction_service_1 = require("./transaction.service");
 let TransactionModule = class TransactionModule {
 };
 TransactionModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         imports: [
             mongoose_1.MongooseModule.forFeature([
                 { name: transaction_schema_1.Transaction.name, schema: transaction_schema_1.TransactionSchema },

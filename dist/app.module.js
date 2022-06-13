@@ -25,7 +25,7 @@ const campaign_schema_1 = require("./campaign/schema/campaign.schema");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         imports: [
             applicant_module_1.ApplicantModule,
             mongoose_1.MongooseModule.forRoot(config_2.default.MONGO_URI, {
@@ -37,7 +37,7 @@ AppModule = __decorate([
             graphql_1.GraphQLModule.forRoot({
                 typePaths: ['./**/*.graphql'],
                 definitions: {
-                    path: path_1.join(process.cwd(), 'src/graphql.ts'),
+                    path: (0, path_1.join)(process.cwd(), 'src/graphql.ts'),
                 },
                 installSubscriptionHandlers: true,
                 path: '/api/v3/graphql',

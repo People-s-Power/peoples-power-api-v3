@@ -18,35 +18,35 @@ const campaign_interface_1 = require("../dto/campaign.interface");
 let Campaign = class Campaign {
 };
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Campaign.prototype, "title", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Campaign.prototype, "image", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Campaign.prototype, "aim", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Campaign.prototype, "target", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Campaign.prototype, "body", void 0);
 __decorate([
-    mongoose_1.Prop({ type: String, slug: 'title' }),
+    (0, mongoose_1.Prop)({ type: String, slug: 'title' }),
     __metadata("design:type", String)
 ], Campaign.prototype, "slug", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Campaign.prototype, "excerpt", void 0);
 __decorate([
-    mongoose_1.Prop({
+    (0, mongoose_1.Prop)({
         type: String,
         enum: campaign_interface_1.CampaignStatusEnum,
         default: campaign_interface_1.CampaignStatusEnum.Active,
@@ -54,74 +54,74 @@ __decorate([
     __metadata("design:type", String)
 ], Campaign.prototype, "status", void 0);
 __decorate([
-    mongoose_1.Prop({ type: Boolean, default: false }),
+    (0, mongoose_1.Prop)({ type: Boolean, default: false }),
     __metadata("design:type", Boolean)
 ], Campaign.prototype, "featured", void 0);
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'User', autopopulate: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'User', autopopulate: true }),
     __metadata("design:type", Object)
 ], Campaign.prototype, "author", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], Campaign.prototype, "createdAt", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], Campaign.prototype, "updatedAt", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Campaign.prototype, "addedFrom", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Campaign.prototype, "category", void 0);
 __decorate([
-    mongoose_1.Prop({
+    (0, mongoose_1.Prop)({
         type: [{ type: mongoose_2.Types.ObjectId, ref: 'Endorsement', autopopulate: true }],
     }),
     __metadata("design:type", Array)
 ], Campaign.prototype, "endorsements", void 0);
 __decorate([
-    mongoose_1.Prop({
+    (0, mongoose_1.Prop)({
         type: [{ type: mongoose_2.Types.ObjectId, ref: 'User', autopopulate: true }],
     }),
     __metadata("design:type", Array)
 ], Campaign.prototype, "endorserIds", void 0);
 __decorate([
-    mongoose_1.Prop({ type: Number, defalut: 0 }),
+    (0, mongoose_1.Prop)({ type: Number, defalut: 0 }),
     __metadata("design:type", Number)
 ], Campaign.prototype, "numberOfPaidEndorsementCount", void 0);
 __decorate([
-    mongoose_1.Prop({ type: Number, defalut: 0 }),
+    (0, mongoose_1.Prop)({ type: Number, defalut: 0 }),
     __metadata("design:type", Number)
 ], Campaign.prototype, "numberOfPaidViewsCount", void 0);
 __decorate([
-    mongoose_1.Prop({ type: [{ type: mongoose_2.Types.ObjectId, ref: 'User', autopopulate: true }] }),
+    (0, mongoose_1.Prop)({ type: [{ type: mongoose_2.Types.ObjectId, ref: 'User', autopopulate: true }] }),
     __metadata("design:type", Array)
 ], Campaign.prototype, "likes", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], Campaign.prototype, "likeCount", void 0);
 __decorate([
-    mongoose_1.Prop({ type: Boolean, default: false }),
+    (0, mongoose_1.Prop)({ type: Boolean, default: false }),
     __metadata("design:type", Boolean)
 ], Campaign.prototype, "promoted", void 0);
 __decorate([
-    mongoose_1.Prop({
+    (0, mongoose_1.Prop)({
         type: [{ type: mongoose_2.Types.ObjectId, ref: 'View', autopopulate: true }],
     }),
     __metadata("design:type", Array)
 ], Campaign.prototype, "views", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Campaign.prototype, "region", void 0);
 Campaign = __decorate([
-    graphql_1.ObjectType(),
-    mongoose_1.Schema({
+    (0, graphql_1.ObjectType)(),
+    (0, mongoose_1.Schema)({
         timestamps: true,
         toJSON: {
             transform: (doc, ret) => {
@@ -138,11 +138,11 @@ exports.Campaign = Campaign;
 let View = class View {
 };
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
     __metadata("design:type", Object)
 ], View.prototype, "user", void 0);
 View = __decorate([
-    mongoose_1.Schema()
+    (0, mongoose_1.Schema)()
 ], View);
 exports.View = View;
 exports.ViewSchema = mongoose_1.SchemaFactory.createForClass(View);

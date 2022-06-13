@@ -18,56 +18,56 @@ const transaction_interface_1 = require("./transaction.interface");
 let Transaction = class Transaction {
 };
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Transaction.prototype, "message", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Transaction.prototype, "reference", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Transaction.prototype, "status", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Transaction.prototype, "transaction", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], Transaction.prototype, "amount", void 0);
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
     __metadata("design:type", user_schema_1.User)
 ], Transaction.prototype, "user", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], Transaction.prototype, "transactionId", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], Transaction.prototype, "paid_at", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], Transaction.prototype, "created_at", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Transaction.prototype, "channel", void 0);
 __decorate([
-    mongoose_1.Prop({ type: String, enum: transaction_interface_1.PaymentPurposeEnum }),
+    (0, mongoose_1.Prop)({ type: String, enum: transaction_interface_1.PaymentPurposeEnum }),
     __metadata("design:type", String)
 ], Transaction.prototype, "purpose", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Transaction.prototype, "key", void 0);
 Transaction = __decorate([
-    graphql_1.ObjectType(),
-    mongoose_1.Schema({
+    (0, graphql_1.ObjectType)(),
+    (0, mongoose_1.Schema)({
         timestamps: true,
         toJSON: {
             transform: (doc, ret) => {

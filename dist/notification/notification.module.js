@@ -17,8 +17,8 @@ const report_schema_1 = require("../applicant/schema/report.schema");
 let NotificationModule = class NotificationModule {
 };
 NotificationModule = __decorate([
-    common_1.Global(),
-    common_1.Module({
+    (0, common_1.Global)(),
+    (0, common_1.Module)({
         imports: [
             mongoose_1.MongooseModule.forFeature([
                 { name: notification_schema_1.Notice.name, schema: notification_schema_1.NoticeSchema },

@@ -14,52 +14,52 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateReportDTO {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateReportDTO.prototype, "applicant_id", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateReportDTO.prototype, "title", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateReportDTO.prototype, "content", void 0);
 exports.CreateReportDTO = CreateReportDTO;
 class UpdateReportDTO {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateReportDTO.prototype, "id", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateReportDTO.prototype, "title", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateReportDTO.prototype, "content", void 0);
 exports.UpdateReportDTO = UpdateReportDTO;
 class CreateRepCommentDTO {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateRepCommentDTO.prototype, "report", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateRepCommentDTO.prototype, "content", void 0);
 exports.CreateRepCommentDTO = CreateRepCommentDTO;
 class UpdateRepCommentDTO {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateRepCommentDTO.prototype, "content", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateRepCommentDTO.prototype, "id", void 0);
 exports.UpdateRepCommentDTO = UpdateRepCommentDTO;

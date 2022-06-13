@@ -24,7 +24,7 @@ const notification_schema_1 = require("../notification/notification.schema");
 let CampaignModule = class CampaignModule {
 };
 CampaignModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         imports: [
             mongoose_1.MongooseModule.forFeature([
                 ,

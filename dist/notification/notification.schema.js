@@ -17,24 +17,24 @@ const user_schema_1 = require("../user/entity/user.schema");
 let Notice = class Notice {
 };
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Notice.prototype, "message", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Notice.prototype, "event", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Notice.prototype, "db_model", void 0);
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
     __metadata("design:type", user_schema_1.User)
 ], Notice.prototype, "user", void 0);
 Notice = __decorate([
-    graphql_1.ObjectType(),
-    mongoose_1.Schema({
+    (0, graphql_1.ObjectType)(),
+    (0, mongoose_1.Schema)({
         timestamps: true,
         toJSON: {
             transform: (doc, ret) => {

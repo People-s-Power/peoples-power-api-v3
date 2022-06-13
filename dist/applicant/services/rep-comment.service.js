@@ -86,7 +86,7 @@ let RepCommentService = class RepCommentService {
     }
     async seedRepComment() {
         var _a;
-        let fakeRepComments = (await connectDb_1.connectOldDB('repcomments'));
+        let fakeRepComments = (await (0, connectDb_1.connectOldDB)('repcomments'));
         fakeRepComments = [...fakeRepComments];
         const newRepComment = (_a = fakeRepComments === null || fakeRepComments === void 0 ? void 0 : fakeRepComments.filter((comment) => comment === null || comment === void 0 ? void 0 : comment.report)) === null || _a === void 0 ? void 0 : _a.map((comment) => (Object.assign(Object.assign({}, comment), { content: (comment === null || comment === void 0 ? void 0 : comment.content) || 'no content' })));
         try {
@@ -100,9 +100,9 @@ let RepCommentService = class RepCommentService {
     }
 };
 RepCommentService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(report_schema_1.RepComment.name)),
-    __param(1, common_1.Inject(common_1.forwardRef(() => report_service_1.ReportService))),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(report_schema_1.RepComment.name)),
+    __param(1, (0, common_1.Inject)((0, common_1.forwardRef)(() => report_service_1.ReportService))),
     __metadata("design:paramtypes", [mongoose_2.Model,
         report_service_1.ReportService])
 ], RepCommentService);

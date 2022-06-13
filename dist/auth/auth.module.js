@@ -26,7 +26,7 @@ let AuthModule = class AuthModule {
     }
 };
 AuthModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         providers: [
             jwt_strategy_1.JwtStrategy,
             auth_resolver_1.AuthResolver,

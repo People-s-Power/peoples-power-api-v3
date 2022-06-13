@@ -14,30 +14,30 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateCampaignDTO {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateCampaignDTO.prototype, "title", void 0);
 __decorate([
-    swagger_1.ApiProperty({ description: 'this is must be uploaded' }),
+    (0, swagger_1.ApiProperty)({ description: 'this is must be uploaded' }),
     __metadata("design:type", String)
 ], CreateCampaignDTO.prototype, "image", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateCampaignDTO.prototype, "aim", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateCampaignDTO.prototype, "target", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateCampaignDTO.prototype, "body", void 0);
 exports.CreateCampaignDTO = CreateCampaignDTO;
-class UpdateCampaignDTO extends swagger_1.PartialType(CreateCampaignDTO) {
+class UpdateCampaignDTO extends (0, swagger_1.PartialType)(CreateCampaignDTO) {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateCampaignDTO.prototype, "id", void 0);
 exports.UpdateCampaignDTO = UpdateCampaignDTO;

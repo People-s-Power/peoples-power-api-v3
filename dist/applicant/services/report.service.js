@@ -143,7 +143,7 @@ let ReportService = class ReportService {
         }
     }
     async seedReport() {
-        let fakeReports = (await connectDb_1.connectOldDB('reports'));
+        let fakeReports = (await (0, connectDb_1.connectOldDB)('reports'));
         fakeReports = [...fakeReports];
         const newReports = fakeReports === null || fakeReports === void 0 ? void 0 : fakeReports.map((report) => (Object.assign(Object.assign({}, report), { applicant_id: report === null || report === void 0 ? void 0 : report.applicant_id })));
         try {
@@ -157,8 +157,8 @@ let ReportService = class ReportService {
     }
 };
 ReportService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(report_schema_1.Report.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(report_schema_1.Report.name)),
     __metadata("design:paramtypes", [mongoose_2.Model,
         rep_comment_service_1.RepCommentService])
 ], ReportService);

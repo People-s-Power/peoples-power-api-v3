@@ -80,96 +80,96 @@ let UserController = class UserController {
     }
 };
 __decorate([
-    common_1.Get(),
+    (0, common_1.Get)(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "findAll", null);
 __decorate([
-    common_1.Get('single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Get)('single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], UserController.prototype, "findOne", null);
 __decorate([
-    common_1.UseGuards(jwt_guard_1.JwtAuthGuard),
-    common_1.Put('update'),
-    __param(0, common_1.Body()),
+    (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
+    (0, common_1.Put)('update'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_dto_1.UpdateUserDTO]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "updateUser", null);
 __decorate([
-    common_1.UseGuards(jwt_guard_1.JwtAuthGuard),
-    common_1.Post('assign'),
-    __param(0, common_1.Body()),
+    (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
+    (0, common_1.Post)('assign'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_dto_1.AssignUserAdminDTO]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "assign", null);
 __decorate([
-    common_1.UseGuards(jwt_guard_1.JwtAuthGuard),
-    common_1.Put('changerole'),
-    __param(0, common_1.Body()),
+    (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
+    (0, common_1.Put)('changerole'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_dto_1.ChangeUserRoleDTO]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "changeRole", null);
 __decorate([
-    common_1.UseGuards(jwt_guard_1.JwtAuthGuard),
-    common_1.Put('changeaccount'),
-    __param(0, common_1.Body()),
+    (0, common_1.UseGuards)(jwt_guard_1.JwtAuthGuard),
+    (0, common_1.Put)('changeaccount'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [user_dto_1.ChangeUserAccountTypeDTO]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "changeAccountType", null);
 __decorate([
-    common_1.UseGuards(local_guard_1.RestAuthGuard),
-    common_1.Post('upload'),
-    __param(0, common_1.Body()),
-    __param(1, common_1.Req()),
+    (0, common_1.UseGuards)(local_guard_1.RestAuthGuard),
+    (0, common_1.Post)('upload'),
+    __param(0, (0, common_1.Body)()),
+    __param(1, (0, common_1.Req)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object, Object]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "upload", null);
 __decorate([
-    common_1.Post('image-upload'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('image-upload'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "uploadImage", null);
 __decorate([
-    common_1.Post('activate'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('activate'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "activateUser", null);
 __decorate([
-    common_1.Delete('single/:id'),
-    __param(0, common_1.Param('id')),
+    (0, common_1.Delete)('single/:id'),
+    __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "deleteUser", null);
 __decorate([
-    common_1.Post('block'),
-    __param(0, common_1.Body()),
+    (0, common_1.Post)('block'),
+    __param(0, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "blockUser", null);
 __decorate([
-    common_1.Post('seed'),
+    (0, common_1.Post)('seed'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "seedUser", null);
 UserController = __decorate([
-    common_1.Controller('api/v3/user'),
-    common_1.UseInterceptors(common_1.CacheInterceptor),
+    (0, common_1.Controller)('api/v3/user'),
+    (0, common_1.UseInterceptors)(common_1.CacheInterceptor),
     __metadata("design:paramtypes", [user_service_1.UserService])
 ], UserController);
 exports.UserController = UserController;

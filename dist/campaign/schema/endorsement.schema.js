@@ -17,36 +17,36 @@ const user_schema_1 = require("../../user/entity/user.schema");
 let Endorsement = class Endorsement {
 };
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
     __metadata("design:type", Object)
 ], Endorsement.prototype, "author", void 0);
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'Campaign' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'Campaign' }),
     __metadata("design:type", Object)
 ], Endorsement.prototype, "campaign", void 0);
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
     __metadata("design:type", Array)
 ], Endorsement.prototype, "likes", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Endorsement.prototype, "body", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], Endorsement.prototype, "createdAt", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Date)
 ], Endorsement.prototype, "updatedAt", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", Number)
 ], Endorsement.prototype, "likeCount", void 0);
 Endorsement = __decorate([
-    graphql_1.ObjectType(),
-    mongoose_1.Schema({
+    (0, graphql_1.ObjectType)(),
+    (0, mongoose_1.Schema)({
         timestamps: true,
         toJSON: {
             transform: (doc, ret) => {

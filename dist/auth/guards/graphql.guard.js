@@ -12,7 +12,7 @@ const common_2 = require("@nestjs/common");
 const graphql_1 = require("@nestjs/graphql");
 const passport_1 = require("@nestjs/passport");
 const user_schema_1 = require("../../user/entity/user.schema");
-let GQLoginGuard = class GQLoginGuard extends passport_1.AuthGuard('local') {
+let GQLoginGuard = class GQLoginGuard extends (0, passport_1.AuthGuard)('local') {
     getRequest(context) {
         const ctx = graphql_1.GqlExecutionContext.create(context);
         return ctx.getContext().req;
@@ -25,7 +25,7 @@ let GQLoginGuard = class GQLoginGuard extends passport_1.AuthGuard('local') {
     }
 };
 GQLoginGuard = __decorate([
-    common_1.Injectable()
+    (0, common_1.Injectable)()
 ], GQLoginGuard);
 exports.GQLoginGuard = GQLoginGuard;
 let GQLGuard = class GQLGuard {
@@ -37,13 +37,13 @@ let GQLGuard = class GQLGuard {
     }
 };
 GQLGuard = __decorate([
-    common_1.Injectable()
+    (0, common_1.Injectable)()
 ], GQLGuard);
 exports.GQLGuard = GQLGuard;
-exports.CurrentUser = common_2.createParamDecorator((data, context) => {
+exports.CurrentUser = (0, common_2.createParamDecorator)((data, context) => {
     const ctx = graphql_1.GqlExecutionContext.create(context);
     return ctx.getContext().req.user;
 });
-exports.ResGql = common_2.createParamDecorator((data, [root, args, ctx, info]) => ctx.res);
-exports.GqlUser = common_2.createParamDecorator((data, [root, args, ctx, info]) => ctx.req && ctx.req.user);
+exports.ResGql = (0, common_2.createParamDecorator)((data, [root, args, ctx, info]) => ctx.res);
+exports.GqlUser = (0, common_2.createParamDecorator)((data, [root, args, ctx, info]) => ctx.req && ctx.req.user);
 //# sourceMappingURL=graphql.guard.js.map

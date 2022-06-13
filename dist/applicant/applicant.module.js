@@ -36,7 +36,7 @@ const rep_comment_controller_1 = require("./controllers/rep-comment.controller")
 let ApplicantModule = class ApplicantModule {
 };
 ApplicantModule = __decorate([
-    common_1.Module({
+    (0, common_1.Module)({
         imports: [
             mongoose_1.MongooseModule.forFeature([
                 { name: applicant_shema_1.Applicant.name, schema: applicant_shema_1.ApplicantSchema },

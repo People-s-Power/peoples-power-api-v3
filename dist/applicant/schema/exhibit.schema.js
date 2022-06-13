@@ -15,19 +15,19 @@ const mongoose_2 = require("mongoose");
 let Exhibit = class Exhibit {
 };
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Exhibit.prototype, "name", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Exhibit.prototype, "image", void 0);
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'Applicant', required: true }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'Applicant', required: true }),
     __metadata("design:type", Object)
 ], Exhibit.prototype, "applicant_id", void 0);
 Exhibit = __decorate([
-    mongoose_1.Schema({
+    (0, mongoose_1.Schema)({
         timestamps: true,
         toJSON: {
             transform: (doc, ret) => {

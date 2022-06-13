@@ -76,8 +76,8 @@ let EnvService = class EnvService {
     }
 };
 EnvService = __decorate([
-    common_1.Injectable(),
-    __param(0, mongoose_1.InjectModel(env_schema_1.Env.name)),
+    (0, common_1.Injectable)(),
+    __param(0, (0, mongoose_1.InjectModel)(env_schema_1.Env.name)),
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], EnvService);
 exports.EnvService = EnvService;

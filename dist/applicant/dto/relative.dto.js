@@ -14,22 +14,22 @@ const swagger_1 = require("@nestjs/swagger");
 class CreateRelativeDTO {
 }
 __decorate([
-    swagger_1.ApiProperty({ required: true }),
+    (0, swagger_1.ApiProperty)({ required: true }),
     __metadata("design:type", String)
 ], CreateRelativeDTO.prototype, "name", void 0);
 __decorate([
-    swagger_1.ApiProperty({ required: true }),
+    (0, swagger_1.ApiProperty)({ required: true }),
     __metadata("design:type", String)
 ], CreateRelativeDTO.prototype, "phone", void 0);
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], CreateRelativeDTO.prototype, "applicant_id", void 0);
 exports.CreateRelativeDTO = CreateRelativeDTO;
-class UpdateRelativeDTO extends swagger_1.PartialType(CreateRelativeDTO) {
+class UpdateRelativeDTO extends (0, swagger_1.PartialType)(CreateRelativeDTO) {
 }
 __decorate([
-    swagger_1.ApiProperty(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], UpdateRelativeDTO.prototype, "id", void 0);
 exports.UpdateRelativeDTO = UpdateRelativeDTO;

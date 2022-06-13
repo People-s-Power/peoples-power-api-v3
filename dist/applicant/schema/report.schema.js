@@ -17,32 +17,32 @@ const user_schema_1 = require("../../user/entity/user.schema");
 let Report = class Report {
 };
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'Applicant' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'Applicant' }),
     __metadata("design:type", Object)
 ], Report.prototype, "applicant_id", void 0);
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
     __metadata("design:type", Object)
 ], Report.prototype, "author", void 0);
 __decorate([
-    mongoose_1.Prop(),
+    (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], Report.prototype, "title", void 0);
 __decorate([
-    mongoose_1.Prop({ default: false }),
+    (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], Report.prototype, "status", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Report.prototype, "content", void 0);
 __decorate([
-    mongoose_1.Prop({ type: [{ type: mongoose_2.Types.ObjectId, ref: 'RepComment' }] }),
+    (0, mongoose_1.Prop)({ type: [{ type: mongoose_2.Types.ObjectId, ref: 'RepComment' }] }),
     __metadata("design:type", Array)
 ], Report.prototype, "comments", void 0);
 Report = __decorate([
-    graphql_1.ObjectType(),
-    mongoose_1.Schema({
+    (0, graphql_1.ObjectType)(),
+    (0, mongoose_1.Schema)({
         timestamps: true,
         toJSON: {
             transform: (doc, ret) => {
@@ -57,24 +57,24 @@ exports.Report = Report;
 let RepComment = class RepComment {
 };
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'Report' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'Report' }),
     __metadata("design:type", Report)
 ], RepComment.prototype, "report", void 0);
 __decorate([
-    mongoose_1.Prop({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
+    (0, mongoose_1.Prop)({ type: mongoose_2.Types.ObjectId, ref: 'User' }),
     __metadata("design:type", Object)
 ], RepComment.prototype, "author", void 0);
 __decorate([
-    mongoose_1.Prop({ default: false }),
+    (0, mongoose_1.Prop)({ default: false }),
     __metadata("design:type", Boolean)
 ], RepComment.prototype, "status", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], RepComment.prototype, "content", void 0);
 RepComment = __decorate([
-    graphql_1.ObjectType(),
-    mongoose_1.Schema({
+    (0, graphql_1.ObjectType)(),
+    (0, mongoose_1.Schema)({
         timestamps: true,
         toJSON: {
             transform: (doc, ret) => {

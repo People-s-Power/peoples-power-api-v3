@@ -14,19 +14,19 @@ const mongoose_1 = require("@nestjs/mongoose");
 let Env = class Env {
 };
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Env.prototype, "name", void 0);
 __decorate([
-    mongoose_1.Prop({ required: true }),
+    (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)
 ], Env.prototype, "value", void 0);
 __decorate([
-    mongoose_1.Prop({ type: Boolean, default: false }),
+    (0, mongoose_1.Prop)({ type: Boolean, default: false }),
     __metadata("design:type", Boolean)
 ], Env.prototype, "isPrivate", void 0);
 Env = __decorate([
-    mongoose_1.Schema()
+    (0, mongoose_1.Schema)()
 ], Env);
 exports.Env = Env;
 exports.EnvSchema = mongoose_1.SchemaFactory.createForClass(Env);

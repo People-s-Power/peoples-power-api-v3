@@ -45,18 +45,18 @@ let NotificationGateway = class NotificationGateway {
     }
 };
 __decorate([
-    websockets_1.WebSocketServer(),
+    (0, websockets_1.WebSocketServer)(),
     __metadata("design:type", ws_1.Server)
 ], NotificationGateway.prototype, "server", void 0);
 __decorate([
-    websockets_1.SubscribeMessage('all'),
+    (0, websockets_1.SubscribeMessage)('all'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Promise)
 ], NotificationGateway.prototype, "getAllNotice", null);
 NotificationGateway = __decorate([
-    websockets_1.WebSocketGateway({ cors: true }),
-    __param(0, mongoose_1.InjectModel(notification_schema_1.Notice.name)),
+    (0, websockets_1.WebSocketGateway)({ cors: true }),
+    __param(0, (0, mongoose_1.InjectModel)(notification_schema_1.Notice.name)),
     __metadata("design:paramtypes", [mongoose_2.Model])
 ], NotificationGateway);
 exports.NotificationGateway = NotificationGateway;
