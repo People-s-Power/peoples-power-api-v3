@@ -46,11 +46,7 @@ async function bootstrap() {
     },
   });
 
-  app.enableCors({
-    origin,
-
-    credentials: true,
-  });
+  app.enableCors();
 
   // app.useWebSocketAdapter(new RedisIoAdapter(app));
   app.use(cookieParser());
